@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Седона - Оставить отзыв</title>
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="menu-items">
+      <li>
+        <a href="index.html#info">информация</a>
+      </li>
+      <li>
+        <a href="#">оставить отзыв</a>
+      </li>
+      <li>
+        <a href="blog.html">блог шерифа</a>
+      </li>
+      <li>
+        <a href="index.html#hotels">гостиницы</a>
+      </li>
+    </ul>
+    <div class="menu-bar">
+      <div class="logo-wrapper">
+        <img src="img/logo.png" alt="sedona logo">
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="poster">
+    <img src="img/sedona.svg" alt="SEDONA">
+    <img src="img/white-triangles-aside.png">
+  </section>
+
+  <section class="feedback">
+    <h1>Оставьте свой отзыв</h1>
+    <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+  </section>
+
+  <form action="" method="post">
+    <section class="full-name">
+      <h1>представьтесь, пожалуйста</h1>
+      <label for="surname">фамилия:</label>
+      <input type="text" id="surname" value="Иванов" required>
+
+      <label for="name">имя:</label>
+      <input type="text" id="name" value="Петр" required>
+
+      <label for="middle-name">отчество:</label>
+      <input type="text" id="middle-name" value="Александрович">
+
+    </section>
+
+    <section class="impression">
+      <h1>ваше общее впечатление</h1>
+      <input type="radio" name="impression" id="impr_1" value="good" />
+      <label for="impr_1">скорее положительное</label>
+      <br>
+      <input type="radio" name="impression" id="impr_2" value="bad" />
+      <label for="impr_2">скорее отрицательное</label>
+    </section>
+
+    <section class="trip-dates">
+      <h1>даты вашей поездки</h1>
+      <label for="arrival">дата приезда:</label>
+      <input type="date" id="arrival" value="4 июля 2015" required>
+
+      <label for="days-amount">длительность пребывания:</label>
+      <input type="number" id="days-amount" value="14" required>
+
+      <label for="departure">дата отъезда:</label>
+      <input type="date" id="departure" value="28 июля 2015" required>
+    </section>
+
+    <section class="persons">
+      <h1>путешественники</h1>
+      <label for="person-amount">количество путешественников:</label>
+      <input type="number" id="person-amount" value="2" required>
+
+      <div class="person">
+        <div class="sequence">
+          <label for="num">№</label>
+          <input type="number" id="num" value="1" readonly>
+        </div>
+
+        <div class="person-full-name">
+          <label for="person-surname">фамилия:</label>
+          <input type="text" id="person-surname" value="Иванов" required>
+
+          <label for="person-name">имя:</label>
+          <input type="text" id="person-name" value="Петр" required>
+
+          <label for="person-middle-name">отчество:</label>
+          <input type="text" id="person-middle-name" value="Александрович">
+        </div>
+      </div>
+
+      <div class="person">
+        <div class="sequence">
+          <label for="num">№</label>
+          <input type="number" id="num" value="2" readonly>
+        </div>
+
+        <div class="person-full-name">
+          <label for="person-surname">фамилия:</label>
+          <input type="text" id="person-surname" value="Иванов" required>
+
+          <label for="person-name">имя:</label>
+          <input type="text" id="person-name" value="Петр" required>
+
+          <label for="person-middle-name">отчество:</label>
+          <input type="text" id="person-middle-name" value="Александрович">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="sights">
+      <h1>посещенные  достопримечательности</h1>
+      <input type="checkbox" id="devil" value="devil" checked>
+      <label for="devil">мост дьявола</label>
+      <br>
+      <input type="checkbox" id="slide" value="slide">
+      <label for="slide">слайд-парк</label>
+      <br>
+      <input type="checkbox" id="bell" value="bell" checked>
+      <label for="bell">гора-колокол</label>
+      <br>
+      <input type="checkbox" id="mountains" value="mountains" checked>
+      <label for="mountains">красные скалы</label>
+    </section>
+
+    <section class="upload-photo">
+      <h1>загрузите фотографии</h1>
+      <input type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
+      <div class="photos-wrapper">
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+        <div class="photo-item"></div>
+      </div>
+    </section>
+
+    <section class="submit">
+      <input type="submit" value="отправить отзыв">
+    </section>
+  </form>
+
+</main>
+
+<footer>
+  <section class="hashtag">
+    <h1>#visitsedona</h1>
+  </section>
+
+  <section class="social">
+    <a href="https://twitter.com/CityofSedonaAZ" class="twitter"></a>
+    <a href="https://www.facebook.com/CityofSedonaAZ" class="facebook"></a>
+    <a href="https://www.youtube.com/user/CityofSedonaAZ" class="youtube"></a>
+  </section>
+
+  <section class="copyright">
+    <h2>разработано</h2>
+  </section>
+</footer>
+</body>
+</html>
