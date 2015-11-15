@@ -9,7 +9,7 @@
     <nav>
       <ul class="menu-items">
         <li>
-          <a href="index.html#info">информация</a>
+          <a href="info.html">информация</a>
         </li>
         <li>
           <a href="#">оставить отзыв</a>
@@ -18,13 +18,13 @@
           <a href="blog.html">блог шерифа</a>
         </li>
         <li>
-          <a href="index.html#hotels">гостиницы</a>
+          <a href="hotels.html">гостиницы</a>
         </li>
       </ul>
       <div class="menu-bar">
-        <div class="logo-wrapper">
+        <a class="logo-wrapper">
           <img src="img/logo.png" alt="sedona logo">
-        </div>
+        </a>
       </div>
     </nav>
   </header>
@@ -32,17 +32,16 @@
   <main>
     <section class="poster">
       <img src="img/sedona.svg" alt="SEDONA">
-      <img src="img/white-triangles-aside.png">
     </section>
 
     <section class="feedback">
-      <h1>Оставьте свой отзыв</h1>
+      <h2>Оставьте свой отзыв</h2>
       <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
 
     <form action="" method="post">
       <section class="full-name">
-        <h1>представьтесь, пожалуйста</h1>
+        <h2>представьтесь, пожалуйста</h2>
         <label for="surname">фамилия:</label>
         <input type="text" id="surname" value="Иванов" required>
 
@@ -55,7 +54,7 @@
       </section>
 
       <section class="impression">
-        <h1>ваше общее впечатление</h1>
+        <h2>ваше общее впечатление</h2>
         <input type="radio" name="impression" id="impr_1" value="good" />
         <label for="impr_1">скорее положительное</label>
         <br>
@@ -64,7 +63,7 @@
       </section>
 
       <section class="trip-dates">
-        <h1>даты вашей поездки</h1>
+        <h2>даты вашей поездки</h2>
         <label for="arrival">дата приезда:</label>
         <input type="date" id="arrival" value="2015-07-04" required>
 
@@ -76,7 +75,7 @@
       </section>
 
       <section class="persons">
-        <h1>путешественники</h1>
+        <h2>путешественники</h2>
         <label for="person-amount">количество путешественников:</label>
         <input type="number" id="person-amount" value="2" required>
 
@@ -119,7 +118,7 @@
       </section>
 
       <section class="sights">
-        <h1>посещенные  достопримечательности</h1>
+        <h2>посещенные  достопримечательности</h2>
         <input type="checkbox" id="devil" value="devil" checked>
         <label for="devil">мост дьявола</label>
         <br>
@@ -134,7 +133,7 @@
       </section>
 
       <section class="upload-photo">
-        <h1>загрузите фотографии</h1>
+        <h2>загрузите фотографии</h2>
         <input type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
         <div class="photos-wrapper">
           <div class="photo-item"></div>
@@ -158,7 +157,7 @@
 
   <footer>
     <section class="hashtag">
-      <h1>#visitsedona</h1>
+      <p class="feature">#visitsedona</p>
     </section>
 
     <section class="social">
@@ -168,7 +167,7 @@
     </section>
 
     <section class="copyright">
-      <h2>разработано</h2>
+      <a href="https://htmlacademy.ru" target="_blank">разработано</a>
     </section>
   </footer>
 </body>
