@@ -1,7 +1,7 @@
 # Проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Зинчук](https://htmlacademy.ru/profile/id86999).
-* Наставник: `Unknown`.
+* Наставник: `Константин Барабаш`.
 
 ### Немного о себе
 
