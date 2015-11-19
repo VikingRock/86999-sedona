@@ -7,7 +7,7 @@
 <body>
   <header class="page-header">
     <nav class="main-nav">
-      <ul class="main-nav__list">
+      <ul>
         <li class="main-nav__item">
           <a href="info.html">информация</a>
         </li>
@@ -21,8 +21,8 @@
           <a href="hotels.html">гостиницы</a>
         </li>
       </ul>
-      <div class="main-nav__menu">
-        <a href="index.html" class="main-nav__logo-link">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
           <img src="img/logo.png" alt="sedona logo">
         </a>
       </div>
@@ -47,9 +47,11 @@
           <a class="post__date" href="#">позавчера</a>
           <a class="post__tag" href="#">происшествия</a>
         </div>
-        <a class="post__title" href="#">
-          <h2>внимание! сбежала моя домашняя анаконда</h2>
-        </a>
+
+        <h2>
+          <a class="post__title" href="#">внимание! сбежала моя домашняя анаконда</a>
+        </h2>
+
         <p class="post__description">
           Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея.
           Увидевшему срочно звонить 911 и бежать от нее подальше.
@@ -93,13 +95,13 @@
 
     </section>
 
-    <nav class="posts-nav">
+    <div class="posts-nav">
       <div class="posts-nav__prev-next">
         <a class="posts-nav__prev" href="#">пред.</a>
         <a class="posts-nav__next" href="#">след.</a>
       </div>
       <a class="posts-nav__view-all" href="blog.html">назад к списку</a>
-    </nav>
+    </div>
   </main>
 
   <footer class="page-footer">
