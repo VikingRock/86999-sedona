@@ -5,24 +5,24 @@
   <title>Седона - Пост</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="menu-items">
-        <li>
+  <header class="page-header">
+    <nav class="main-nav">
+      <ul>
+        <li class="main-nav__item">
           <a href="info.html">информация</a>
         </li>
-        <li>
+        <li class="main-nav__item">
           <a href="form.html">оставить отзыв</a>
         </li>
-        <li>
+        <li class="main-nav__item">
           <a href="blog.html">блог шерифа</a>
         </li>
-        <li>
+        <li class="main-nav__item">
           <a href="hotels.html">гостиницы</a>
         </li>
       </ul>
-      <div class="menu-bar">
-        <a href="index.html" class="logo-wrapper">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
           <img src="img/logo.png" alt="sedona logo">
         </a>
       </div>
@@ -34,7 +34,7 @@
       <img src="img/sedona.svg" alt="SEDONA">
     </section>
 
-    <section class="blog-description">
+    <section class="description  description--blog">
       <h1>блог шерифа</h1>
       <p>
         Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.
@@ -42,19 +42,23 @@
     </section>
 
     <section class="post">
-      <article class="post-excerpt">
-        <div class="meta">
-          <a href="#" class="meta-date">позавчера</a>
-          <a href="#" class="meta-tag">происшествия</a>
+      <article class="post__excerpt">
+        <div class="post__meta">
+          <a class="post__date" href="#">позавчера</a>
+          <a class="post__tag" href="#">происшествия</a>
         </div>
-        <a href="#">
-          <h2>внимание! сбежала моя домашняя анаконда</h2>
-        </a>
-        <p>Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея.
-          Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
+
+        <h2>
+          <a class="post__title" href="#">внимание! сбежала моя домашняя анаконда</a>
+        </h2>
+
+        <p class="post__description">
+          Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея.
+          Увидевшему срочно звонить 911 и бежать от нее подальше.
+        </p>
       </article>
 
-      <article class="post-text">
+      <article class="post__text">
         <h3>Предыстория</h3>
         <p>
           В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине.
@@ -91,24 +95,24 @@
 
     </section>
 
-    <nav>
-      <div class="prev-next">
-        <a href="#">пред.</a>
-        <a href="#">след.</a>
+    <div class="posts-nav">
+      <div class="posts-nav__prev-next">
+        <a class="posts-nav__prev" href="#">пред.</a>
+        <a class="posts-nav__next" href="#">след.</a>
       </div>
-      <a href="blog.html">назад к списку</a>
-    </nav>
+      <a class="posts-nav__view-all" href="blog.html">назад к списку</a>
+    </div>
   </main>
 
-  <footer>
+  <footer class="page-footer">
     <section class="hashtag">
       <p class="feature">#visitsedona</p>
     </section>
 
     <section class="social">
-      <a href="https://twitter.com/CityofSedonaAZ" class="twitter"></a>
-      <a href="https://www.facebook.com/CityofSedonaAZ" class="facebook"></a>
-      <a href="https://www.youtube.com/user/CityofSedonaAZ" class="youtube"></a>
+      <a class="social__btn--twitter" href="https://twitter.com/CityofSedonaAZ">наш канал Twitter</a>
+      <a class="social__btn--facebook" href="https://www.facebook.com/CityofSedonaAZ">наша группа Facebook</a>
+      <a class="social__btn--youtube" href="https://www.youtube.com/user/CityofSedonaAZ" >наш канал Youtube</a>
     </section>
 
     <section class="copyright">
