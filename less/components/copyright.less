@@ -1,0 +1,20 @@
+.copyright {
+  padding-bottom: 35px;
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: @text-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: -30px;
+      display: inline-block;
+      width: 27px;
+      height: 34px;
+      background: url("../img/htmlacademy.svg") no-repeat;
+    }
+  }
+}
