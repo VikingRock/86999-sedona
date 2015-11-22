@@ -1,0 +1,46 @@
+.main-nav {
+  position: relative;
+
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    background-color: @bg-color-blue;
+    border-bottom: 2px groove @border-color--menu;
+
+    &:last-child {
+      border-bottom: 1px groove @border-color--menu;
+    }
+
+    & a {
+      display: block;
+      padding: 20px 0;
+      color: @text-color--alternate;
+      text-decoration: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    z-index: 10;
+    width: 23px;
+    height: 22px;
+    background: url("../img/menu-close.svg") no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 27px;
+    z-index: 10;
+    width: 23px;
+    height: 22px;
+    background: url("../img/menu-hamburger.png") no-repeat;
+  }
+}

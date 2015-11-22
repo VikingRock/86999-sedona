@@ -2,240 +2,247 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>Седона - Оставить отзыв</title>
 </head>
 <body>
-  <header class="page-header">
-    <nav class="main-nav">
-      <ul>
-        <li class="main-nav__item">
-          <a href="info.html">информация</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">оставить отзыв</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="blog.html">блог шерифа</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="hotels.html">гостиницы</a>
-        </li>
-      </ul>
-      <div class="logo">
-        <a href="index.html" class="logo__link">
-          <img src="img/logo.png" alt="sedona logo">
-        </a>
+
+  <div class="page-container">
+
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul>
+          <li class="main-nav__item">
+            <a href="info.html">информация</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">оставить отзыв</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="blog.html">блог шерифа</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="hotels.html">гостиницы</a>
+          </li>
+        </ul>
+        <div class="logo">
+          <a href="index.html" class="logo__link">
+            <img src="img/logo.png" width="67" alt="sedona logo">
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="poster">
+        <img src="img/sedona.svg" alt="SEDONA">
       </div>
-    </nav>
-  </header>
 
-  <main>
-    <div class="poster">
-      <img src="img/sedona.svg" alt="SEDONA">
-    </div>
-
-    <section class="description  description--feedback">
-      <h2>Оставьте свой отзыв</h2>
-      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-    </section>
-
-    <form class="feedback" action="" method="post">
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
-
-        <div class="feedback__field">
-          <label for="surname">фамилия:</label>
-          <input type="text" id="surname" value="Иванов" required>
-        </div>
-
-        <div class="feedback__field">
-          <label for="name">имя:</label>
-          <input type="text" id="name" value="Петр" required>
-        </div>
-
-        <div class="feedback__field">
-          <label for="middle-name">отчество:</label>
-          <input type="text" id="middle-name" value="Александрович">
-        </div>
+      <section class="description  description--feedback">
+        <h2>Оставьте свой отзыв</h2>
+        <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
 
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">ваше общее впечатление</h2>
+      <form class="feedback" action="" method="post">
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
 
-        <div class="feedback__field  feedback__field--radio">
-          <input type="radio" name="impression" id="impr_1" value="good" />
-          <label for="impr_1">скорее положительное</label>
-        </div>
+          <div class="feedback__field">
+            <label for="surname">фамилия:</label>
+            <input type="text" id="surname" value="Иванов" required>
+          </div>
 
-        <div class="feedback__field  feedback__field--radio">
-          <input type="radio" name="impression" id="impr_2" value="bad" />
-          <label for="impr_2">скорее отрицательное</label>
-        </div>
-      </section>
+          <div class="feedback__field">
+            <label for="name">имя:</label>
+            <input type="text" id="name" value="Петр" required>
+          </div>
 
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
+          <div class="feedback__field">
+            <label for="middle-name">отчество:</label>
+            <input type="text" id="middle-name" value="Александрович">
+          </div>
+        </section>
 
-        <div class="feedback__field">
-          <label for="arrival">дата приезда:</label>
-          <input type="date" id="arrival" value="2015-07-04" required>
-        </div>
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">ваше общее впечатление</h2>
 
-        <div class="feedback__field  feedback__field--counter">
-          <label for="days-amount">длительность пребывания:</label>
-          <input type="number" id="days-amount" value="14" min="1" max="365" required>
-        </div>
+          <div class="feedback__field  feedback__field--radio">
+            <input type="radio" name="impression" id="impr_1" value="good" />
+            <label for="impr_1">скорее положительное</label>
+          </div>
 
-        <div class="feedback__field">
-          <label for="departure">дата отъезда:</label>
-          <input type="date" id="departure" value="2015-07-28" required>
-        </div>
-      </section>
+          <div class="feedback__field  feedback__field--radio">
+            <input type="radio" name="impression" id="impr_2" value="bad" />
+            <label for="impr_2">скорее отрицательное</label>
+          </div>
+        </section>
 
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">путешественники</h2>
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
 
-        <div class="feedback__field  feedback__field--counter">
-          <label for="person-amount">количество путешественников:</label>
-          <input type="number" id="person-amount" value="2" min="1" max="10" required>
-        </div>
+          <div class="feedback__field">
+            <label for="arrival">дата приезда:</label>
+            <input type="date" id="arrival" value="2015-07-04" required>
+          </div>
 
-        <div class="person">
-          <div class="person__sequence">
-            <div class="feedback__field  feedback__field--readonly">
-              <label for="num-1">№</label>
-              <input type="number" id="num-1" value="1" readonly>
+          <div class="feedback__field  feedback__field--counter">
+            <label for="days-amount">длительность пребывания:</label>
+            <input type="number" id="days-amount" value="14" min="1" max="365" required>
+          </div>
+
+          <div class="feedback__field">
+            <label for="departure">дата отъезда:</label>
+            <input type="date" id="departure" value="2015-07-28" required>
+          </div>
+        </section>
+
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">путешественники</h2>
+
+          <div class="feedback__field  feedback__field--counter">
+            <label for="person-amount">количество путешественников:</label>
+            <input type="number" id="person-amount" value="2" min="1" max="10" required>
+          </div>
+
+          <div class="person">
+            <div class="person__sequence">
+              <div class="feedback__field  feedback__field--readonly">
+                <label for="num-1">№</label>
+                <input type="number" id="num-1" value="1" readonly>
+              </div>
+            </div>
+
+            <div class="person__details">
+              <div class="feedback__field">
+                <label for="surname-1">фамилия:</label>
+                <input type="text" id="surname-1" value="Иванов" required>
+              </div>
+
+              <div class="feedback__field">
+                <label for="name-1">имя:</label>
+                <input type="text" id="name-1" value="Петр" required>
+              </div>
+
+              <div class="feedback__field">
+                <label for="middle-name-1">отчество:</label>
+                <input type="text" id="middle-name-1" value="Александрович">
+              </div>
             </div>
           </div>
 
-          <div class="person__details">
-            <div class="feedback__field">
-              <label for="surname-1">фамилия:</label>
-              <input type="text" id="surname-1" value="Иванов" required>
+          <div class="person">
+            <div class="person__sequence">
+              <div class="feedback__field  feedback__field--readonly">
+                <label for="num-2">№</label>
+                <input type="number" id="num-2" value="2" readonly>
+              </div>
             </div>
 
-            <div class="feedback__field">
-              <label for="name-1">имя:</label>
-              <input type="text" id="name-1" value="Петр" required>
-            </div>
+            <div class="person__details">
+              <div class="feedback__field">
+                <label for="surname-2">фамилия:</label>
+                <input type="text" id="surname-2" value="Иванов" required>
+              </div>
 
-            <div class="feedback__field">
-              <label for="middle-name-1">отчество:</label>
-              <input type="text" id="middle-name-1" value="Александрович">
-            </div>
-          </div>
-        </div>
+              <div class="feedback__field">
+                <label for="name-2">имя:</label>
+                <input type="text" id="name-2" value="Петр" required>
+              </div>
 
-        <div class="person">
-          <div class="person__sequence">
-            <div class="feedback__field  feedback__field--readonly">
-              <label for="num-2">№</label>
-              <input type="number" id="num-2" value="2" readonly>
+              <div class="feedback__field">
+                <label for="middle-name-2">отчество:</label>
+                <input type="text" id="middle-name-2" value="Александрович">
+              </div>
             </div>
           </div>
 
-          <div class="person__details">
-            <div class="feedback__field">
-              <label for="surname-2">фамилия:</label>
-              <input type="text" id="surname-2" value="Иванов" required>
+        </section>
+
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">посещенные  достопримечательности</h2>
+
+          <div class="feedback__field  feedback__field--check">
+            <input type="checkbox" id="devil" value="devil" checked>
+            <label for="devil">мост дьявола</label>
+          </div>
+
+          <div class="feedback__field  feedback__field--check">
+            <input type="checkbox" id="slide" value="slide">
+            <label for="slide">слайд-парк</label>
+          </div>
+
+          <div class="feedback__field  feedback__field--check">
+            <input type="checkbox" id="bell" value="bell" checked>
+            <label for="bell">гора-колокол</label>
+          </div>
+
+          <div class="feedback__field  feedback__field--check">
+            <input type="checkbox" id="mountains" value="mountains" checked>
+            <label for="mountains">красные скалы</label>
+          </div>
+        </section>
+
+        <section class="feedback__fieldset">
+          <h2 class="feedback__fieldset-name">загрузите фотографии</h2>
+          <input class="btn  btn-secondary" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
+
+          <div class="feedback__gallery">
+            <div class="feedback__photo">
+              <img src="img/uploaded/1.jpg" alt="1">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/2.jpg" alt="2">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/3.jpg" alt="3">
             </div>
 
-            <div class="feedback__field">
-              <label for="name-2">имя:</label>
-              <input type="text" id="name-2" value="Петр" required>
+            <div class="feedback__photo">
+              <img src="img/uploaded/4.jpg" alt="4">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/5.jpg" alt="5">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/6.jpg" alt="6">
             </div>
 
-            <div class="feedback__field">
-              <label for="middle-name-2">отчество:</label>
-              <input type="text" id="middle-name-2" value="Александрович">
+            <div class="feedback__photo">
+              <img src="img/uploaded/7.jpg" alt="7">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/8.jpg" alt="8">
+            </div>
+            <div class="feedback__photo">
+              <img src="img/uploaded/9.jpg" alt="9">
             </div>
           </div>
+        </section>
+
+        <div class="feedback__submit">
+          <input class="btn" type="submit" value="отправить отзыв">
         </div>
+      </form>
 
-      </section>
+    </main>
 
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">посещенные  достопримечательности</h2>
-
-        <div class="feedback__field  feedback__field--check">
-          <input type="checkbox" id="devil" value="devil" checked>
-          <label for="devil">мост дьявола</label>
-        </div>
-
-        <div class="feedback__field  feedback__field--check">
-          <input type="checkbox" id="slide" value="slide">
-          <label for="slide">слайд-парк</label>
-        </div>
-
-        <div class="feedback__field  feedback__field--check">
-          <input type="checkbox" id="bell" value="bell" checked>
-          <label for="bell">гора-колокол</label>
-        </div>
-
-        <div class="feedback__field  feedback__field--check">
-          <input type="checkbox" id="mountains" value="mountains" checked>
-          <label for="mountains">красные скалы</label>
-        </div>
-      </section>
-
-      <section class="feedback__fieldset">
-        <h2 class="feedback__fieldset-name">загрузите фотографии</h2>
-        <input class="btn  btn-secondary" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
-
-        <div class="feedback__gallery">
-          <div class="feedback__photo">
-            <img src="img/uploaded/1.jpg" alt="1">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/2.jpg" alt="2">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/3.jpg" alt="3">
-          </div>
-
-          <div class="feedback__photo">
-            <img src="img/uploaded/4.jpg" alt="4">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/5.jpg" alt="5">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/6.jpg" alt="6">
-          </div>
-
-          <div class="feedback__photo">
-            <img src="img/uploaded/7.jpg" alt="7">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/8.jpg" alt="8">
-          </div>
-          <div class="feedback__photo">
-            <img src="img/uploaded/9.jpg" alt="9">
-          </div>
-        </div>
-      </section>
-
-      <div class="feedback__submit">
-        <input class="btn" type="submit" value="отправить отзыв">
+    <footer class="page-footer">
+      <div class="hashtag">
+        <p class="feature">#visitsedona</p>
       </div>
-    </form>
 
-  </main>
+      <div class="social">
+        <a class="social__btn--twitter" href="https://twitter.com/CityofSedonaAZ">наш канал Twitter</a>
+        <a class="social__btn--facebook" href="https://www.facebook.com/CityofSedonaAZ">наша группа Facebook</a>
+        <a class="social__btn--youtube" href="https://www.youtube.com/user/CityofSedonaAZ">наш канал Youtube</a>
+      </div>
 
-  <footer class="page-footer">
-    <div class="hashtag">
-      <p class="feature">#visitsedona</p>
-    </div>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru" target="_blank">разработано</a>
+      </div>
+    </footer>
 
-    <div class="social">
-      <a class="social__btn--twitter" href="https://twitter.com/CityofSedonaAZ">наш канал Twitter</a>
-      <a class="social__btn--facebook" href="https://www.facebook.com/CityofSedonaAZ">наша группа Facebook</a>
-      <a class="social__btn--youtube" href="https://www.youtube.com/user/CityofSedonaAZ">наш канал Youtube</a>
-    </div>
+  </div>
 
-    <div class="copyright">
-      <a href="https://htmlacademy.ru" target="_blank">разработано</a>
-    </div>
-  </footer>
 </body>
 </html>
