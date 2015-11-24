@@ -12,10 +12,30 @@
     color: @text-color;
   }
 
+  &__photo-wrapper {
+    margin: 0 auto;
+    width: 320px;
+    height: 255px;
+    overflow: hidden;
+    position: relative;
+  }
+
   &__photo {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+
+    &--left-25 {
+      left: -25%;
+    }
 
     img {
-      display: block;
+      position: absolute;
+      width: auto;
+      height: 100%;
+      left: 0; top: 0; bottom: 0; right: 0;
+      margin: auto;
     }
   }
 }
