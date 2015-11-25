@@ -1,11 +1,12 @@
 .poster {
-  .poster-bkg(50%, 0, 40px, 80px);
+  .poster-bkg(50%, 73%, 340px, 40px, 80px);
 
   &--big {
-    .poster-bkg(50%, 0, 47px, 49px);
-    background-size:
-      auto,
-      768px;
+    .poster-bkg(50%, 0, 768px, 47px, 49px);
+    //background-size:
+    //  auto,
+    //  768px,
+    //  auto;
   }
 
   img {
@@ -22,11 +23,15 @@
   }
 }
 
-.poster-bkg(@x, @y, @padding-top, @padding-bottom) {
+.poster-bkg(@x, @y, @bg-size, @padding-top, @padding-bottom) {
   background:
     url("../img/white-triangles-aside.png") 50% 100% no-repeat,
     url("../img/sedona-poster.jpg") @x @y no-repeat,
     @bg-color-blue--light;
+  background-size:
+    auto,
+    @bg-size,
+    auto;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
 }
