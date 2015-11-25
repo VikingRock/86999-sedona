@@ -51,16 +51,18 @@
       </section>
 
       <form class="feedback" action="" method="post">
+
         <section class="feedback__fieldset">
+
           <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
 
           <div class="feedback__field">
-            <label for="surname">фамилия:</label>
+            <label class="required-field" for="surname">фамилия:</label>
             <input type="text" id="surname" value="Иванов" required>
           </div>
 
           <div class="feedback__field">
-            <label for="name">имя:</label>
+            <label class="required-field" for="name">имя:</label>
             <input type="text" id="name" value="Петр" required>
           </div>
 
@@ -68,6 +70,7 @@
             <label for="middle-name">отчество:</label>
             <input type="text" id="middle-name" value="Александрович">
           </div>
+
         </section>
 
         <section class="feedback__fieldset">
@@ -88,17 +91,17 @@
           <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
 
           <div class="feedback__field">
-            <label for="arrival">дата приезда:</label>
+            <label class="required-field" for="arrival">дата приезда:</label>
             <input type="date" id="arrival" value="2015-07-04" required>
           </div>
 
           <div class="feedback__field  feedback__field--counter">
-            <label for="days-amount">длительность пребывания:</label>
+            <label class="required-field" for="days-amount">длительность пребывания:</label>
             <input type="number" id="days-amount" value="14" min="1" max="365" required>
           </div>
 
           <div class="feedback__field">
-            <label for="departure">дата отъезда:</label>
+            <label class="required-field" for="departure">дата отъезда:</label>
             <input type="date" id="departure" value="2015-07-28" required>
           </div>
         </section>
@@ -107,7 +110,7 @@
           <h2 class="feedback__fieldset-name">путешественники</h2>
 
           <div class="feedback__field  feedback__field--counter">
-            <label for="person-amount">количество путешественников:</label>
+            <label class="required-field" for="person-amount">количество путешественников:</label>
             <input type="number" id="person-amount" value="2" min="1" max="10" required>
           </div>
 
@@ -121,12 +124,12 @@
 
             <div class="person__details">
               <div class="feedback__field">
-                <label for="surname-1">фамилия:</label>
+                <label class="required-field" for="surname-1">фамилия:</label>
                 <input type="text" id="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
-                <label for="name-1">имя:</label>
+                <label class="required-field" for="name-1">имя:</label>
                 <input type="text" id="name-1" value="Петр" required>
               </div>
 
@@ -147,12 +150,12 @@
 
             <div class="person__details">
               <div class="feedback__field">
-                <label for="surname-2">фамилия:</label>
+                <label class="required-field" for="surname-2">фамилия:</label>
                 <input type="text" id="surname-2" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
-                <label for="name-2">имя:</label>
+                <label class="required-field" for="name-2">имя:</label>
                 <input type="text" id="name-2" value="Петр" required>
               </div>
 
@@ -201,7 +204,7 @@
               <img src="img/uploaded/2.jpg" alt="2">
             </div>
             <div class="feedback__photo">
-              <img src="img/uploaded/3.jpg" alt="3">
+              <img src="img/uploaded/2.jpg" alt="3">
             </div>
 
             <div class="feedback__photo">
@@ -217,18 +220,13 @@
             <div class="feedback__photo">
               <img src="img/uploaded/7.jpg" alt="7">
             </div>
-            <div class="feedback__photo">
-              <img src="img/uploaded/8.jpg" alt="8">
-            </div>
-            <div class="feedback__photo">
-              <img src="img/uploaded/9.jpg" alt="9">
-            </div>
           </div>
         </section>
 
         <div class="feedback__submit">
           <input class="btn" type="submit" value="отправить отзыв">
         </div>
+
       </form>
 
     </main>

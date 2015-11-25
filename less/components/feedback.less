@@ -1,14 +1,41 @@
 .feedback {
+  padding: 0 0 16px;
 
   &__fieldset {
-
+    padding: 24px @container-padding--mobile;
+    border-top: 1px solid @border-color--reason;
+    text-align: left;
   }
 
   &__fieldset-name {
-
+    text-align: center;
   }
 
   &__field {
+    font-weight: 700;
+
+    label {
+      padding: 0 0 0 22px;
+      font-weight: 400;
+      position: relative;
+    }
+
+    .required-field::after {
+      content: '*';
+      color: red;
+      position: absolute;
+      top: -4px;
+      right: -9px;
+    }
+
+    input:not([type="radio"]):not([type="checkbox"]) {
+      display: block;
+      width: 100%;
+      padding: 22px;
+      margin: 14px 0 23px;
+      background: @bg-color-grey;
+      border: none;
+    }
 
     &--radio {
 
