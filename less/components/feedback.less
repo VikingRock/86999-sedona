@@ -38,7 +38,31 @@
     }
 
     &--radio {
+      padding: 7px 0;
 
+      input {
+        display: none;
+      }
+
+      label {
+        padding: 0;
+      }
+
+      input + label span {
+        display:inline-block;
+        width:56px;
+        height:56px;
+        margin:-1px 4px 0 0;
+        vertical-align:middle;
+        background: @bg-color-grey;
+        border-radius: 50%;
+        cursor:pointer;
+      }
+
+      input:checked + label span {
+        background: @text-color;
+        border: 17px solid @bg-color-grey;
+      }
     }
 
     &--counter {
