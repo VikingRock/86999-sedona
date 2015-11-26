@@ -4,9 +4,20 @@
   text-decoration: none;
   color: @text-color--alternate;
   background-color: @bg-color-blue;
+  border: none;
+  text-transform: inherit;
 
   &--big {
+    width: 100%;
     padding: 19px 47px;
     font-size: @font-size--h2;
+  }
+
+  &--secondary {
+    width: 100%;
+    padding: 19px 20px;
+    font-size: @font-size--h1;
+    background: @bg-color-grey;
+    color: @bg-color-grey--dark;
   }
 }

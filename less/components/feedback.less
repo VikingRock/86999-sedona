@@ -132,6 +132,16 @@
 
   &__upload {
     padding-bottom:55px;
+
+    input[type="file"] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
   }
 
   &__photo {
@@ -160,6 +170,6 @@
   }
 
   &__submit {
-
+    padding: 0 @container-padding--mobile;
   }
 }

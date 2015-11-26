@@ -196,7 +196,8 @@
           <h2 class="feedback__fieldset-name">загрузите фотографии</h2>
 
           <div class="feedback__upload">
-            <input class="btn  btn-secondary" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
+            <input type="file" name="file" id="file"  accept="image/jpeg,image/png,image/gif" multiple>
+            <label class="btn  btn--secondary" for="file">выбрать фотографии</label>
           </div>
 
           <div class="feedback__gallery">
@@ -227,7 +228,7 @@
         </section>
 
         <div class="feedback__submit">
-          <input class="btn" type="submit" value="отправить отзыв">
+          <input class="btn btn--big" type="submit" value="отправить отзыв">
         </div>
 
       </form>
