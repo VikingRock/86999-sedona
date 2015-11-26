@@ -44,12 +44,13 @@
     &--radio {
       padding: 7px 0;
 
-      input {
+      input[type="radio"] {
         display: none;
       }
 
       label {
         padding: 0;
+        cursor:pointer;
       }
 
       input + label span {
@@ -60,7 +61,6 @@
         margin:-1px 4px 0 0;
         background: @bg-color-grey;
         border-radius: 50%;
-        cursor:pointer;
       }
 
       input:checked + label span {
@@ -74,7 +74,51 @@
     }
 
     &--check {
+      margin-bottom: 30px;
+      &:not(:last-child) {
+        margin-bottom: 65px;
+      }
 
+      label {
+        padding-left: 76px;
+        font-weight: 700;
+        cursor:pointer;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      label::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        z-index: 1;
+        width: 56px;
+        height: 56px;
+        border-radius: 6px;
+        background: @bg-color-grey;
+      }
+
+      label::after {
+        content: '';
+        position: absolute;
+        visibility: hidden;
+        top: -10px;
+        left: 10px;
+        z-index: 1;
+        width: 40px;
+        height: 20px;
+        border: 2px solid @text-color--h1;
+        border-top-style: none;
+        border-right-style: none;
+        transform: rotate(-45deg);
+      }
+
+      input[type="checkbox"]:checked ~ label::after {
+        visibility: visible;
+      }
     }
 
     &--readonly {
