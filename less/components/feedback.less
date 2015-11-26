@@ -11,6 +11,23 @@
     text-align: center;
   }
 
+  &__counter-wrapper {
+    position: relative;
+
+    &::after {
+      content: "дн.";
+      position: absolute;
+      z-index: 1;
+      right: 80px;
+      bottom: -55px;
+      color: @bg-color-grey--dark;
+    }
+
+    &--person::after {
+      content: "чел.";
+    }
+  }
+
   &__field {
     font-weight: 700;
 
@@ -70,7 +87,36 @@
     }
 
     &--counter {
+      .clearfix();
 
+      button[class^="btn__counter"] {
+        float: left;
+        width: 61px;
+        position: relative;
+        padding: 22px 0 22px 22px;
+        margin: 14px 0 23px;
+        border: none;
+        background: @bg-color-grey;
+        color: @bg-color-grey--dark;
+      }
+
+      button[class^="btn__counter"]::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        padding: 20px 25px;
+        font-size: 2.3rem;
+      }
+
+      input[type="number"]#person-amount,
+      input[type="number"]#days-amount {
+        float: left;
+        position: relative;
+        width: 145px;
+        margin: 14px 6px 23px;
+      }
     }
 
     &--check {
@@ -120,10 +166,6 @@
         visibility: visible;
       }
     }
-
-    &--readonly {
-
-    }
   }
 
   &__gallery {
@@ -165,8 +207,8 @@
       color: @bg-color-grey--dark;
       background: @bg-color-grey;
       border-radius: 50%;
+      cursor: pointer;
     }
-
   }
 
   &__submit {

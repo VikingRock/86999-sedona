@@ -97,7 +97,11 @@
 
           <div class="feedback__field  feedback__field--counter">
             <label class="required-field" for="days-amount">длительность пребывания:</label>
-            <input type="number" id="days-amount" value="14" min="1" max="365" required>
+            <button class="btn__counter--left icon-minus">&nbsp;</button>
+            <div class="feedback__counter-wrapper">
+              <input type="number" id="days-amount" value="14" min="1" max="365" required>
+            </div>
+            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
           <div class="feedback__field  feedback__field--calculated">
@@ -111,7 +115,11 @@
 
           <div class="feedback__field  feedback__field--counter">
             <label class="required-field" for="person-amount">количество путешественников:</label>
-            <input type="number" id="person-amount" value="2" min="1" max="10" required>
+            <button class="btn__counter--left icon-minus">&nbsp;</button>
+            <div class="feedback__counter-wrapper  feedback__counter-wrapper--person">
+              <input type="number" id="person-amount" value="2" min="1" max="10" required>
+            </div>
+            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
           <div class="person">
