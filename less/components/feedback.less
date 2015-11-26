@@ -31,10 +31,14 @@
     input:not([type="radio"]):not([type="checkbox"]) {
       display: block;
       width: 100%;
-      padding: 22px;
+      padding: 22px 0 22px 22px;
       margin: 14px 0 23px;
       background: @bg-color-grey;
       border: none;
+    }
+
+    input[type="date"]#departure {
+      border: 2px solid @bg-color-grey--dark;
     }
 
     &--radio {
@@ -50,10 +54,10 @@
 
       input + label span {
         display:inline-block;
+        vertical-align:middle;
         width:56px;
         height:56px;
         margin:-1px 4px 0 0;
-        vertical-align:middle;
         background: @bg-color-grey;
         border-radius: 50%;
         cursor:pointer;
