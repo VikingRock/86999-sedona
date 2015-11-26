@@ -127,10 +127,35 @@
   }
 
   &__gallery {
+    .clearfix();
+  }
 
+  &__upload {
+    padding-bottom:55px;
   }
 
   &__photo {
+    position: relative;
+    float: left;
+    padding-bottom: 35px;
+
+    &:not(:nth-child(3n)){
+      padding-right: 35px;
+    }
+
+    &::before {
+      content: "X";
+      position: absolute;
+      left: 20px;
+      top: -20px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 5px;
+      color: @bg-color-grey--dark;
+      background: @bg-color-grey;
+      border-radius: 50%;
+    }
 
   }
 
