@@ -7,8 +7,15 @@
   &__excerpt {
     border-top: 2px solid @bg-color-grey;
     padding: 40px 0 36px;
+
     h2 {
       margin: 0 auto 32px;
+    }
+
+    &--lonely {
+      border-top: none;
+      padding: 0 @container-padding--mobile;
+      color: @bg-color-brown;
     }
   }
 
@@ -37,6 +44,10 @@
       width: 11px;
       height: 11px;
     }
+
+    &--lonely {
+      margin-bottom: 30px;
+    }
   }
 
   &__date {
@@ -54,6 +65,48 @@
 
     &::before {
       background: url("../img/meta-sprite.png") 100% 0 no-repeat;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    padding: 20px @container-padding--mobile 0;
+
+    ul {
+
+    }
+
+    li {
+      font-weight: @font-weight--h1;
+      list-style: none;
+      margin-bottom: 5px;
+
+      &::before {
+        content:'\25A0';
+        display: block;
+        position: relative;
+        max-width: 0;
+        max-height: 0;
+        left: -20px;
+        top: -6px;
+        color: @bg-color-blue;
+        font-size: 20px;
+      }
+    }
+
+    a {
+      color: @bg-color-brown;
+    }
+
+    blockquote {
+      margin: 30px 0;
+      padding-left: 40px;
+      border-left: 2px solid @bg-color-blue;
+    }
+
+    cite {
+      text-transform: capitalize;
+      color: @bg-color-brown;
     }
   }
 }

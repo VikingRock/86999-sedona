@@ -1,0 +1,36 @@
+.posts-nav {
+
+  .pagination-border();
+
+  &__prev-next {
+    .clearfix();
+  }
+
+  &__prev {
+    .link-style();
+    float: left;
+    width: 45%;
+  }
+
+  &__next {
+    .link-style();
+    float: right;
+    width: 45%;
+  }
+
+  &__view-all {
+    .link-style();
+    margin-bottom: 0;
+  }
+}
+
+.link-style() {
+  text-decoration: none;
+  display: block;
+  padding: 21px 0;
+  border: 2px solid @bg-color-blue;
+  margin-bottom: 20px;
+  font-size: @font-size--h2;
+  font-weight: @font-weight--h2;
+  color: @text-color--h2;
+}
