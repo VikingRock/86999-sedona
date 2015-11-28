@@ -1,9 +1,13 @@
-.clearfix(){
-  &::after {
-    content:"";
-    display:table;
-    clear: both;
+.clearfix{
+  zoom:1;
+  &:before, &:after {
+    content: "";
+    display: table;
     height: 0;
+  }
+
+  &:after {
+    clear: both;
   }
 }
 
