@@ -1,13 +1,18 @@
 .info-list {
-  padding: 30px @container-padding--mobile 1px @container-padding--mobile;
+  padding: 25px @container-padding--mobile 23px @container-padding--mobile;
+
+  &__text {
+    line-height: @line-height--alternate;
+    margin-top: 11px;
+  }
 
   &__item {
     position: relative;
     text-align: left;
-    margin-bottom: 40px;
-    padding: 10px 0 0 52px;
+    margin-bottom: 14px;
+    padding: 10px 0 0 50px;
     background-repeat: no-repeat;
-    background-position: left 15px;
+    background-position: left 7px;
 
     &--house {
       background-image: url("../img/info-house.svg");
@@ -21,7 +26,8 @@
 
     &--present {
       background-image: url("../img/info-present.svg");
-      background-size: 34px;
+      background-size: 32px;
+      background-position: 5px 5px;
     }
   }
 }
