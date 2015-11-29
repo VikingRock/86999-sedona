@@ -1,8 +1,8 @@
 .feedback {
-  padding: 0 0 16px;
+  padding: 0 0 80px;
 
   &__fieldset {
-    padding: 24px @container-padding--mobile;
+    padding: 18px @container-padding--mobile 3px;
     border-top: 1px solid @border-color--reason;
     text-align: left;
   }
@@ -19,7 +19,7 @@
       position: absolute;
       z-index: 1;
       right: 80px;
-      bottom: -55px;
+      bottom: -53px;
       color: @bg-color-grey--dark;
     }
 
@@ -29,37 +29,43 @@
   }
 
   &__field {
-    font-weight: 700;
+    font-weight: @font-weight--h2;
 
     label {
       padding: 0 0 0 22px;
-      font-weight: 400;
+      font-weight: @font-weight;
       position: relative;
     }
 
-    .required-field::after {
+    .required__field::after {
       content: '*';
       color: red;
       position: absolute;
-      top: -4px;
+      top: 0;
       right: -9px;
+    }
+
+    input {
+      font-size: @font-size--h2;
+      font-weight: @font-weight--h2;
     }
 
     input:not([type="radio"]):not([type="checkbox"]) {
       display: block;
       width: 100%;
-      padding: 22px 0 22px 22px;
-      margin: 14px 0 23px;
+      padding: 18px 0 17px 22px;
+      margin: 10px 0 20px;
       background: @bg-color-grey;
       border: none;
     }
 
-    input[type="date"]#departure {
+    input[type="text"]#departure {
       border: 2px solid @bg-color-grey--dark;
     }
 
     &--radio {
-      padding: 7px 0;
+      padding: 7px 0 19px;
+      margin-top: -12px;
 
       input[type="radio"] {
         display: none;
@@ -67,6 +73,9 @@
 
       label {
         padding: 0;
+        font-weight: @font-weight--h2;
+        font-size: @font-size--h2;
+        text-transform: none;
         cursor:pointer;
       }
 
@@ -75,7 +84,7 @@
         vertical-align:middle;
         width:56px;
         height:56px;
-        margin:-1px 4px 0 0;
+        margin:-1px 22px 0 0;
         background: @bg-color-grey;
         border-radius: 50%;
       }
@@ -93,8 +102,8 @@
         float: left;
         width: 61px;
         position: relative;
-        padding: 22px 0 22px 22px;
-        margin: 14px 0 23px;
+        padding: 20px 0 20px 22px;
+        margin: 14px 0 0;
         border: none;
         background: @bg-color-grey;
         color: @bg-color-grey--dark;
@@ -106,7 +115,7 @@
         bottom: 0;
         z-index: 1;
         width: 100%;
-        padding: 20px 25px;
+        padding: 18px 25px;
         font-size: 2.3rem;
       }
 
@@ -120,14 +129,21 @@
     }
 
     &--check {
-      margin-bottom: 30px;
-      &:not(:last-child) {
-        margin-bottom: 65px;
+      margin: 0 0 57px 0;
+
+      &:nth-child(2) {
+        margin: 34px 0 57px 0;
+      }
+
+      &:last-child {
+        margin: 0 0 39px 0;
       }
 
       label {
-        padding-left: 76px;
-        font-weight: 700;
+        padding-left: 79px;
+        font-weight: @font-weight--h2;
+        font-size: @font-size--h2;
+        text-transform: none;
         cursor:pointer;
       }
 
@@ -138,7 +154,7 @@
       label::before {
         content: '';
         position: absolute;
-        top: -20px;
+        top: -15px;
         left: 0;
         z-index: 1;
         width: 56px;
@@ -151,12 +167,12 @@
         content: '';
         position: absolute;
         visibility: hidden;
-        top: -10px;
-        left: 10px;
+        top: 3px;
+        left: 18px;
         z-index: 1;
-        width: 40px;
-        height: 20px;
-        border: 2px solid @text-color--h1;
+        width: 21px;
+        height: 14px;
+        border: 4px solid @text-color--h1;
         border-top-style: none;
         border-right-style: none;
         transform: rotate(-45deg);
@@ -173,6 +189,7 @@
   }
 
   &__upload {
+    margin-top: -13px;
     padding-bottom:55px;
 
     input[type="file"] {
@@ -189,21 +206,21 @@
   &__photo {
     position: relative;
     float: left;
-    padding-bottom: 35px;
+    padding-bottom: 31px;
 
     &:not(:nth-child(3n)){
       padding-right: 35px;
     }
 
-    &::before {
-      content: "X";
+    .cancel-upload {
       position: absolute;
       left: 20px;
-      top: -20px;
+      top: -15px;
       width: 30px;
       height: 30px;
       text-align: center;
-      padding: 5px;
+      text-decoration: none;
+      padding: 6px 5px 5px 5px;
       color: @bg-color-grey--dark;
       background: @bg-color-grey;
       border-radius: 50%;
@@ -212,6 +229,6 @@
   }
 
   &__submit {
-    padding: 0 @container-padding--mobile;
+    padding: 9px @container-padding--mobile 0;
   }
 }

@@ -57,12 +57,12 @@
           <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
 
           <div class="feedback__field">
-            <label class="required-field" for="surname">фамилия:</label>
+            <label class="required__field" for="surname">фамилия:</label>
             <input type="text" id="surname" value="Иванов" required>
           </div>
 
           <div class="feedback__field">
-            <label class="required-field" for="name">имя:</label>
+            <label class="required__field" for="name">имя:</label>
             <input type="text" id="name" value="Петр" required>
           </div>
 
@@ -78,12 +78,12 @@
 
           <div class="feedback__field  feedback__field--radio">
             <input type="radio" name="impression" id="impr_1" value="good" checked>
-            <label for="impr_1"><span></span>скорее положительное</label>
+            <label for="impr_1"><span></span>Скорее положительное</label>
           </div>
 
           <div class="feedback__field  feedback__field--radio">
             <input type="radio" name="impression" id="impr_2" value="bad">
-            <label for="impr_2"><span></span>скорее отрицательное</label>
+            <label for="impr_2"><span></span>Скорее отрицательное</label>
           </div>
         </section>
 
@@ -91,12 +91,14 @@
           <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
 
           <div class="feedback__field">
-            <label class="required-field" for="arrival">дата приезда:</label>
-            <input type="date" id="arrival" value="2015-07-04" required>
+            <label class="required__field" for="arrival">дата приезда:</label>
+            <input type="text" id="arrival" value="4 июля 2015" required>
           </div>
 
           <div class="feedback__field  feedback__field--counter">
-            <label class="required-field" for="days-amount">длительность пребывания:</label>
+            <div class="required__wrapper">
+              <label class="required__field" for="days-amount">длительность пребывания:</label>
+            </div>
             <button class="btn__counter--left icon-minus">&nbsp;</button>
             <div class="feedback__counter-wrapper">
               <input type="number" id="days-amount" value="14" min="1" max="365" required>
@@ -105,8 +107,8 @@
           </div>
 
           <div class="feedback__field  feedback__field--calculated">
-            <label class="required-field" for="departure">дата отъезда:</label>
-            <input type="date" id="departure" value="2015-07-28" required>
+            <label class="required__field" for="departure">дата отъезда:</label>
+            <input type="text" id="departure" value="28 июля 2015" required>
           </div>
         </section>
 
@@ -114,7 +116,9 @@
           <h2 class="feedback__fieldset-name">путешественники</h2>
 
           <div class="feedback__field  feedback__field--counter">
-            <label class="required-field" for="person-amount">количество путешественников:</label>
+            <div class="required__wrapper">
+              <label class="required__field" for="person-amount">количество путешественников:</label>
+            </div>
             <button class="btn__counter--left icon-minus">&nbsp;</button>
             <div class="feedback__counter-wrapper  feedback__counter-wrapper--person">
               <input type="number" id="person-amount" value="2" min="1" max="10" required>
@@ -124,20 +128,20 @@
 
           <div class="person">
             <div class="person__sequence">
-              <div class="feedback__field  feedback__field--readonly">
-                <label for="num-1">№</label>
-                <input type="number" id="num-1" value="1" readonly>
+              <div class="feedback__field">
+                <label>№</label>
+                <p class="person__number">1</p>
               </div>
             </div>
 
             <div class="person__details">
               <div class="feedback__field">
-                <label class="required-field" for="surname-1">фамилия:</label>
+                <label class="required__field" for="surname-1">фамилия:</label>
                 <input type="text" id="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
-                <label class="required-field" for="name-1">имя:</label>
+                <label class="required__field" for="name-1">имя:</label>
                 <input type="text" id="name-1" value="Петр" required>
               </div>
 
@@ -150,20 +154,20 @@
 
           <div class="person">
             <div class="person__sequence">
-              <div class="feedback__field  feedback__field--readonly">
-                <label for="num-2">№</label>
-                <input type="number" id="num-2" value="2" readonly>
+              <div class="feedback__field">
+                <label>№</label>
+                <p class="person__number">2</p>
               </div>
             </div>
 
             <div class="person__details">
               <div class="feedback__field">
-                <label class="required-field" for="surname-2">фамилия:</label>
+                <label class="required__field" for="surname-2">фамилия:</label>
                 <input type="text" id="surname-2" value="Второй" required>
               </div>
 
               <div class="feedback__field">
-                <label class="required-field" for="name-2">имя:</label>
+                <label class="required__field" for="name-2">имя:</label>
                 <input type="text" id="name-2" value="Петр" required>
               </div>
 
@@ -181,22 +185,22 @@
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="devil" value="devil" checked>
-            <label for="devil">мост дьявола</label>
+            <label for="devil">Мост Дьявола</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="slide" value="slide">
-            <label for="slide">слайд-парк</label>
+            <label for="slide">Слайд-парк</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="bell" value="bell" checked>
-            <label for="bell">гора-колокол</label>
+            <label for="bell">Гора-Колокол</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="mountains" value="mountains" checked>
-            <label for="mountains">красные скалы</label>
+            <label for="mountains">Красные скалы</label>
           </div>
         </section>
 
@@ -210,26 +214,33 @@
 
           <div class="feedback__gallery">
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/1.jpg" alt="1">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/2.jpg" alt="2">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/2.jpg" alt="3">
             </div>
 
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/4.jpg" alt="4">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/5.jpg" alt="5">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/6.jpg" alt="6">
             </div>
 
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/7.jpg" alt="7">
             </div>
           </div>
@@ -245,7 +256,7 @@
 
     <footer class="page-footer">
       <div class="hashtag">
-        <p class="feature">#visitsedona</p>
+        <p class="feature  feature--big">#visitsedona</p>
       </div>
 
       <div class="social">
