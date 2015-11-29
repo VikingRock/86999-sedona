@@ -1,15 +1,22 @@
 .post {
 
+  &__description {
+    line-height: @line-height--alternate;
+    padding-bottom: 21px;
+  }
+
   &__container {
     padding: 0 @container-padding--mobile;
   }
 
   &__excerpt {
     border-top: 2px solid @bg-color-grey;
-    padding: 40px 0 36px;
+    padding: 33px 0 34px;
 
     h2 {
-      margin: 0 auto 32px;
+      line-height: @line-height--excerpt;
+      font-size: 2.1rem;
+      margin-bottom: 21px;
     }
 
     &--lonely {
@@ -25,22 +32,25 @@
   }
 
   &__meta {
-    .clearfix();
+
+    text-align: left;
+
     a {
       text-decoration: none;
       color: @bg-color-grey--dark;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      line-height: @line-height--alternate;
       font-style: italic;
       position: relative;
       text-align: left;
-      padding-left: 30px;
+      padding-left: 35px;
     }
 
     a::before {
       content: "";
       position: absolute;
-      left: 15px;
-      bottom: 2px;
+      left: 17px;
+      bottom: 6px;
       width: 11px;
       height: 11px;
     }
@@ -51,8 +61,7 @@
   }
 
   &__date {
-    float: left;
-    width: 50%;
+    display: inline-block;
 
     &::before {
       background: url("../img/meta-sprite.png") 0 0 no-repeat;
@@ -60,8 +69,7 @@
   }
 
   &__tag {
-    float: right;
-    width: 50%;
+    display: inline-block;
 
     &::before {
       background: url("../img/meta-sprite.png") 100% 0 no-repeat;
