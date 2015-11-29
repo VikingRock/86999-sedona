@@ -2,7 +2,7 @@
 
   &__description {
     line-height: @line-height--alternate;
-    padding-bottom: 21px;
+    padding-bottom: 4px;
   }
 
   &__container {
@@ -23,6 +23,17 @@
       border-top: none;
       padding: 0 @container-padding--mobile;
       color: @bg-color-brown;
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 1.46;
+      }
+
+      p {
+        font-size: @font-size--h2;
+        line-height: @line-height--h2;
+        text-transform: none;
+      }
     }
   }
 
@@ -56,7 +67,7 @@
     }
 
     &--lonely {
-      margin-bottom: 30px;
+      margin: -7px 0 30px 0;
     }
   }
 
@@ -78,10 +89,23 @@
 
   &__text {
     text-align: left;
-    padding: 20px @container-padding--mobile 0;
+    padding: 0 @container-padding--mobile 0;
+    margin: -12px 0 44px 0;
+
+    h3 {
+      line-height: 0.87;
+      font-size: 3rem;
+      margin-top: 42px;
+    }
+
+    p {
+      line-height: 1.75;
+      font-size: @font-size--text;
+    }
 
     ul {
-
+      margin: 28px 0 29px;
+      padding-left: 17px;
     }
 
     li {
@@ -95,10 +119,10 @@
         position: relative;
         max-width: 0;
         max-height: 0;
-        left: -20px;
-        top: -6px;
+        left: -19px;
+        top: -2px;
         color: @bg-color-blue;
-        font-size: 20px;
+        font-size: 1.5rem;
       }
     }
 
@@ -107,8 +131,8 @@
     }
 
     blockquote {
-      margin: 30px 0;
-      padding-left: 40px;
+      margin: 25px 0;
+      padding-left: 17px;
       border-left: 2px solid @bg-color-blue;
     }
 
