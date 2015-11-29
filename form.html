@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin">
   <link rel="stylesheet" href="css/style.css">
   <title>Седона - Оставить отзыв</title>
 </head>
@@ -28,6 +28,10 @@
             <a href="hotels.html">гостиницы</a>
           </li>
         </ul>
+
+        <div class="icon-menu"></div>
+        <div class="icon-close"></div>
+
         <div class="logo">
           <a href="index.html" class="logo__link">
             <img src="img/logo.png" width="138" alt="sedona logo">
@@ -38,7 +42,7 @@
 
     <main>
       <div class="poster">
-        <img src="img/sedona.svg" alt="SEDONA">
+        <img src="img/sedona.svg" width="174" alt="SEDONA">
       </div>
 
       <section class="description  description--feedback">
@@ -47,16 +51,18 @@
       </section>
 
       <form class="feedback" action="" method="post">
+
         <section class="feedback__fieldset">
+
           <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
 
           <div class="feedback__field">
-            <label for="surname">фамилия:</label>
+            <label class="required__field" for="surname">фамилия:</label>
             <input type="text" id="surname" value="Иванов" required>
           </div>
 
           <div class="feedback__field">
-            <label for="name">имя:</label>
+            <label class="required__field" for="name">имя:</label>
             <input type="text" id="name" value="Петр" required>
           </div>
 
@@ -64,19 +70,20 @@
             <label for="middle-name">отчество:</label>
             <input type="text" id="middle-name" value="Александрович">
           </div>
+
         </section>
 
         <section class="feedback__fieldset">
           <h2 class="feedback__fieldset-name">ваше общее впечатление</h2>
 
           <div class="feedback__field  feedback__field--radio">
-            <input type="radio" name="impression" id="impr_1" value="good" />
-            <label for="impr_1">скорее положительное</label>
+            <input type="radio" name="impression" id="impr_1" value="good" checked>
+            <label for="impr_1"><span></span>Скорее положительное</label>
           </div>
 
           <div class="feedback__field  feedback__field--radio">
-            <input type="radio" name="impression" id="impr_2" value="bad" />
-            <label for="impr_2">скорее отрицательное</label>
+            <input type="radio" name="impression" id="impr_2" value="bad">
+            <label for="impr_2"><span></span>Скорее отрицательное</label>
           </div>
         </section>
 
@@ -84,18 +91,24 @@
           <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
 
           <div class="feedback__field">
-            <label for="arrival">дата приезда:</label>
-            <input type="date" id="arrival" value="2015-07-04" required>
+            <label class="required__field" for="arrival">дата приезда:</label>
+            <input type="text" id="arrival" value="4 июля 2015" required>
           </div>
 
           <div class="feedback__field  feedback__field--counter">
-            <label for="days-amount">длительность пребывания:</label>
-            <input type="number" id="days-amount" value="14" min="1" max="365" required>
+            <div class="required__wrapper">
+              <label class="required__field" for="days-amount">длительность пребывания:</label>
+            </div>
+            <button class="btn__counter--left icon-minus">&nbsp;</button>
+            <div class="feedback__counter-wrapper">
+              <input type="number" id="days-amount" value="14" min="1" max="365" required>
+            </div>
+            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
-          <div class="feedback__field">
-            <label for="departure">дата отъезда:</label>
-            <input type="date" id="departure" value="2015-07-28" required>
+          <div class="feedback__field  feedback__field--calculated">
+            <label class="required__field" for="departure">дата отъезда:</label>
+            <input type="text" id="departure" value="28 июля 2015" required>
           </div>
         </section>
 
@@ -103,26 +116,32 @@
           <h2 class="feedback__fieldset-name">путешественники</h2>
 
           <div class="feedback__field  feedback__field--counter">
-            <label for="person-amount">количество путешественников:</label>
-            <input type="number" id="person-amount" value="2" min="1" max="10" required>
+            <div class="required__wrapper">
+              <label class="required__field" for="person-amount">количество путешественников:</label>
+            </div>
+            <button class="btn__counter--left icon-minus">&nbsp;</button>
+            <div class="feedback__counter-wrapper  feedback__counter-wrapper--person">
+              <input type="number" id="person-amount" value="2" min="1" max="10" required>
+            </div>
+            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
           <div class="person">
             <div class="person__sequence">
-              <div class="feedback__field  feedback__field--readonly">
-                <label for="num-1">№</label>
-                <input type="number" id="num-1" value="1" readonly>
+              <div class="feedback__field">
+                <label>№</label>
+                <p class="person__number">1</p>
               </div>
             </div>
 
             <div class="person__details">
               <div class="feedback__field">
-                <label for="surname-1">фамилия:</label>
+                <label class="required__field" for="surname-1">фамилия:</label>
                 <input type="text" id="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
-                <label for="name-1">имя:</label>
+                <label class="required__field" for="name-1">имя:</label>
                 <input type="text" id="name-1" value="Петр" required>
               </div>
 
@@ -135,20 +154,20 @@
 
           <div class="person">
             <div class="person__sequence">
-              <div class="feedback__field  feedback__field--readonly">
-                <label for="num-2">№</label>
-                <input type="number" id="num-2" value="2" readonly>
+              <div class="feedback__field">
+                <label>№</label>
+                <p class="person__number">2</p>
               </div>
             </div>
 
             <div class="person__details">
               <div class="feedback__field">
-                <label for="surname-2">фамилия:</label>
-                <input type="text" id="surname-2" value="Иванов" required>
+                <label class="required__field" for="surname-2">фамилия:</label>
+                <input type="text" id="surname-2" value="Второй" required>
               </div>
 
               <div class="feedback__field">
-                <label for="name-2">имя:</label>
+                <label class="required__field" for="name-2">имя:</label>
                 <input type="text" id="name-2" value="Петр" required>
               </div>
 
@@ -166,84 +185,104 @@
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="devil" value="devil" checked>
-            <label for="devil">мост дьявола</label>
+            <label for="devil">Мост Дьявола</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="slide" value="slide">
-            <label for="slide">слайд-парк</label>
+            <label for="slide">Слайд-парк</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="bell" value="bell" checked>
-            <label for="bell">гора-колокол</label>
+            <label for="bell">Гора-Колокол</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
             <input type="checkbox" id="mountains" value="mountains" checked>
-            <label for="mountains">красные скалы</label>
+            <label for="mountains">Красные скалы</label>
           </div>
         </section>
 
         <section class="feedback__fieldset">
           <h2 class="feedback__fieldset-name">загрузите фотографии</h2>
-          <input class="btn  btn-secondary" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
+
+          <div class="feedback__upload">
+            <input type="file" name="file" id="file"  accept="image/jpeg,image/png,image/gif" multiple>
+            <label class="btn  btn--secondary" for="file">выбрать фотографии</label>
+          </div>
 
           <div class="feedback__gallery">
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/1.jpg" alt="1">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/2.jpg" alt="2">
             </div>
             <div class="feedback__photo">
-              <img src="img/uploaded/3.jpg" alt="3">
+              <a class="cancel-upload icon-close" href=""></a>
+              <img src="img/uploaded/2.jpg" alt="3">
             </div>
 
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/4.jpg" alt="4">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/5.jpg" alt="5">
             </div>
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/6.jpg" alt="6">
             </div>
 
             <div class="feedback__photo">
+              <a class="cancel-upload icon-close" href=""></a>
               <img src="img/uploaded/7.jpg" alt="7">
-            </div>
-            <div class="feedback__photo">
-              <img src="img/uploaded/8.jpg" alt="8">
-            </div>
-            <div class="feedback__photo">
-              <img src="img/uploaded/9.jpg" alt="9">
             </div>
           </div>
         </section>
 
         <div class="feedback__submit">
-          <input class="btn" type="submit" value="отправить отзыв">
+          <input class="btn btn--big" type="submit" value="отправить отзыв">
         </div>
+
       </form>
 
     </main>
 
     <footer class="page-footer">
       <div class="hashtag">
-        <p class="feature">#visitsedona</p>
+        <p class="feature  feature--big">#visitsedona</p>
       </div>
 
       <div class="social">
-        <a class="social__btn--twitter" href="https://twitter.com/CityofSedonaAZ">наш канал Twitter</a>
-        <a class="social__btn--facebook" href="https://www.facebook.com/CityofSedonaAZ">наша группа Facebook</a>
-        <a class="social__btn--youtube" href="https://www.youtube.com/user/CityofSedonaAZ">наш канал Youtube</a>
+        <a class="social__btn  icon-twitter" href="https://twitter.com/CityofSedonaAZ" title="наш канал Twitter" target="_blank"></a>
+        <a class="social__btn  icon-facebook" href="https://www.facebook.com/CityofSedonaAZ" title="наша группа Facebook" target="_blank"></a>
+        <a class="social__btn  icon-youtube" href="https://www.youtube.com/user/CityofSedonaAZ" title="наш канал Youtube" target="_blank"></a>
       </div>
 
       <div class="copyright">
         <a href="https://htmlacademy.ru" target="_blank">разработано</a>
       </div>
     </footer>
+
+    <div class="popup-container">
+      <div class="popup popup--failure">
+        <h2>что-то пошло не так!</h2>
+        <p>проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <a href="" class="btn btn--big">ok</a>
+      </div>
+
+      <div class="popup popup--success">
+        <h2>ваш отзыв отправлен!</h2>
+        <p>спасибо за ваше участие, ваш отзыв уже поступил к нам. в ближайшее время мы опубликуем его на сайте.</p>
+        <a href="" class="btn btn--big">закрыть окно</a>
+      </div>
+    </div>
 
   </div>
 

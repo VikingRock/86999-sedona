@@ -1,8 +1,16 @@
 .reason {
-  padding: 45px 31px;
+  padding: 38px @container-padding--mobile 40px;
+
+  p {
+    line-height: @line-height--alternate;
+  }
+
+  &__number {
+    margin: 9px 0 15px;
+  }
 
   &--plain {
-    padding: 31px 11px;
+    padding: 26px 0;
 
     &:not(:last-child) {
       border-bottom: 1px solid @border-color--reason;

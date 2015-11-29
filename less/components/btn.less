@@ -1,12 +1,24 @@
 .btn {
   display: inline-block;
-  vertical-align: middle;
+  text-align: center;
   text-decoration: none;
   color: @text-color--alternate;
   background-color: @bg-color-blue;
+  border: none;
+  text-transform: inherit;
+  font-size: @font-size--button;
+  font-weight: @font-weight--h1;
+  line-height: @line-height;
+  cursor: pointer;
+  padding: 19px 0;
 
   &--big {
-    padding: 19px 47px;
-    font-size: @font-size--h2;
+    width: 100%;
+  }
+
+  &--secondary {
+    width: 100%;
+    background: @bg-color-grey;
+    color: @bg-color-grey--dark;
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic,latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin">
   <link rel="stylesheet" href="css/style.css">
   <title>Седона - Блог</title>
 </head>
@@ -28,6 +28,10 @@
             <a href="hotels.html">гостиницы</a>
           </li>
         </ul>
+
+        <div class="icon-menu"></div>
+        <div class="icon-close"></div>
+
         <div class="logo">
           <a href="index.html" class="logo__link">
             <img src="img/logo.png" width="138" alt="sedona logo">
@@ -38,7 +42,7 @@
 
     <main>
       <div class="poster">
-        <img src="img/sedona.svg" alt="SEDONA">
+        <img src="img/sedona.svg" width="174" alt="SEDONA">
       </div>
 
       <section class="description  description--blog">
@@ -48,7 +52,7 @@
         </p>
       </section>
 
-      <section class="posts-container">
+      <section class="post__container">
         <article class="post__excerpt">
           <h2>
             <a class="post__title" href="post.html">внимание! сбежала моя домашняя анаконда</a>
@@ -136,20 +140,20 @@
 
       <div class="pager">
         <ul>
-          <li class="pager__item">
-            <a href="#">1</a>
+          <li>
+            <a class="pager__item pager__item--active" href="#">1</a>
           </li>
-          <li class="pager__item">
-            <a href="#">2</a>
+          <li>
+            <a class="pager__item" href="#">2</a>
           </li>
-          <li class="pager__item">
-            <a href="#">3</a>
+          <li>
+            <a class="pager__item" href="#">3</a>
           </li>
-          <li class="pager__item">
-            <a href="#">4</a>
+          <li>
+            <a class="pager__item" href="#">4</a>
           </li>
-          <li class="pager__item">
-            <a href="#">5</a>
+          <li>
+            <a class="pager__item" href="#">5</a>
           </li>
         </ul>
       </div>
@@ -157,13 +161,13 @@
 
     <footer class="page-footer">
       <div class="hashtag">
-        <p class="feature">#visitsedona</p>
+        <p class="feature  feature--big">#visitsedona</p>
       </div>
 
       <div class="social">
-        <a class="social__btn--twitter" href="https://twitter.com/CityofSedonaAZ">наш канал Twitter</a>
-        <a class="social__btn--facebook" href="https://www.facebook.com/CityofSedonaAZ">наша группа Facebook</a>
-        <a class="social__btn--youtube" href="https://www.youtube.com/user/CityofSedonaAZ">наш канал Youtube</a>
+        <a class="social__btn  icon-twitter" href="https://twitter.com/CityofSedonaAZ" title="наш канал Twitter" target="_blank"></a>
+        <a class="social__btn  icon-facebook" href="https://www.facebook.com/CityofSedonaAZ" title="наша группа Facebook" target="_blank"></a>
+        <a class="social__btn  icon-youtube" href="https://www.youtube.com/user/CityofSedonaAZ" title="наш канал Youtube" target="_blank"></a>
       </div>
 
       <div class="copyright">

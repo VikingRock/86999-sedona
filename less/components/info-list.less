@@ -1,27 +1,33 @@
 .info-list {
-  padding: 30px 45px 1px 0;
+  padding: 25px @container-padding--mobile 23px @container-padding--mobile;
+
+  &__text {
+    line-height: @line-height--alternate;
+    margin-top: 11px;
+  }
 
   &__item {
-    text-align: left;
-    margin-bottom: 40px;
-    padding: 10px 0 0 45px;
     position: relative;
+    text-align: left;
+    margin-bottom: 14px;
+    padding: 10px 0 0 50px;
     background-repeat: no-repeat;
-    background-position: left 15px;
+    background-position: left 7px;
 
     &--house {
       background-image: url("../img/info-house.svg");
-      background-size: 37px 37px;
+      background-size: 37px;
     }
 
     &--burger {
       background-image: url("../img/info-burger.svg");
-      background-size: 37px 35px;
+      background-size: 37px;
     }
 
     &--present {
       background-image: url("../img/info-present.svg");
-      background-size: 32px 38px;
+      background-size: 32px;
+      background-position: 5px 5px;
     }
   }
 }

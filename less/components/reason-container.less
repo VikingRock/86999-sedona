@@ -4,10 +4,11 @@
 
   &--angled {
     background: @bg-color-blue url("../img/white-triangle-center.png") 50% 0 no-repeat;
+    padding-top: 39px;
   }
 
   &--alternative-bg {
-    padding: 0 20px;
+    padding: 0 @container-padding--mobile 2px;
     background-color: @bg-color-grey;
     color: @text-color;
   }
@@ -15,7 +16,7 @@
   &__photo-wrapper {
     margin: 0 auto;
     width: 320px;
-    height: 255px;
+    height: 256px;
     overflow: hidden;
     position: relative;
   }
@@ -24,7 +25,7 @@
     width: 200%;
     height: 100%;
     position: absolute;
-    left: -50%;
+    left: -52.5%;
 
     &--left-25 {
       left: -25%;
@@ -36,6 +37,7 @@
       height: 100%;
       left: 0; top: 0; bottom: 0; right: 0;
       margin: auto;
+      background: @bg-color-brown;
     }
   }
 }
