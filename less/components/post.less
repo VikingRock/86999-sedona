@@ -1,0 +1,144 @@
+.post {
+
+  &__description {
+    line-height: @line-height--alternate;
+    padding-bottom: 4px;
+  }
+
+  &__container {
+    padding: 0 @container-padding--mobile;
+  }
+
+  &__excerpt {
+    border-top: 2px solid @bg-color-grey;
+    padding: 33px 0 34px;
+
+    h2 {
+      line-height: @line-height--excerpt;
+      font-size: 2.1rem;
+      margin-bottom: 21px;
+    }
+
+    &--lonely {
+      border-top: none;
+      padding: 0 @container-padding--mobile;
+      color: @bg-color-brown;
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 1.46;
+      }
+
+      p {
+        font-size: @font-size--h2;
+        line-height: @line-height--h2;
+        text-transform: none;
+      }
+    }
+  }
+
+  &__title {
+    text-decoration: none;
+    color: @text-color--h2;
+  }
+
+  &__meta {
+
+    text-align: left;
+
+    a {
+      text-decoration: none;
+      color: @bg-color-grey--dark;
+      font-size: 1.4rem;
+      line-height: @line-height--alternate;
+      font-style: italic;
+      position: relative;
+      text-align: left;
+      padding-left: 35px;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      bottom: 6px;
+      width: 11px;
+      height: 11px;
+    }
+
+    &--lonely {
+      margin: -7px 0 30px 0;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+
+    &::before {
+      background: url("../img/meta-sprite.png") 0 0 no-repeat;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+
+    &::before {
+      background: url("../img/meta-sprite.png") 100% 0 no-repeat;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    padding: 0 @container-padding--mobile 0;
+    margin: -12px 0 44px 0;
+
+    h3 {
+      line-height: 0.87;
+      font-size: 3rem;
+      margin-top: 42px;
+    }
+
+    p {
+      line-height: 1.75;
+      font-size: @font-size--text;
+    }
+
+    ul {
+      margin: 28px 0 29px;
+      padding-left: 17px;
+    }
+
+    li {
+      font-weight: @font-weight--h1;
+      list-style: none;
+      margin-bottom: 5px;
+
+      &::before {
+        content:'\25A0';
+        display: block;
+        position: relative;
+        max-width: 0;
+        max-height: 0;
+        left: -19px;
+        top: -2px;
+        color: @bg-color-blue;
+        font-size: 1.5rem;
+      }
+    }
+
+    a {
+      color: @bg-color-brown;
+    }
+
+    blockquote {
+      margin: 25px 0;
+      padding-left: 17px;
+      border-left: 2px solid @bg-color-blue;
+    }
+
+    cite {
+      text-transform: capitalize;
+      color: @bg-color-brown;
+    }
+  }
+}

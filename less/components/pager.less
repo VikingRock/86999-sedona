@@ -1,0 +1,37 @@
+.pager {
+
+  .pagination-border();
+
+  .clearfix();
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: white;
+    font-size: @font-size--button;
+    font-weight: @font-weight--h1;
+    background-color: @bg-color-blue;
+    display: block;
+    float: left;
+    width: 58px;
+    margin: 0 16px 17px 0;
+    padding: 15px 0;
+
+    li:nth-child(4n) & {
+      margin:0 0 16px 0;
+    }
+
+    li:last-child & {
+      margin: 0 16px 0 0;
+    }
+
+    &--active {
+      background-color: @bg-color-grey;
+      color: @text-color--h1;
+    }
+  }
+}
