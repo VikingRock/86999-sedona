@@ -1,0 +1,22 @@
+.popup {
+  padding: 46px @container-padding--mobile 35px;
+  box-shadow: 3px 0px 35px -1px rgba(0,0,0,0.73);
+  background: white;
+  position: fixed;
+  max-width: @mobile-viewport;
+  top: 30%;
+  left: auto;
+  display: none;
+
+  p {
+    margin: -4px 0 20px 0;
+  }
+
+  &--failure {
+    z-index: 20;
+  }
+
+  &--success {
+    z-index: 10;
+  }
+}
