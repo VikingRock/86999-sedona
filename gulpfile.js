@@ -8,7 +8,7 @@ var autoprefixer = require("autoprefixer");
 
 gulp.task("style", function() {
   return gulp.src("less/style.less")
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
       autoprefixer({browsers: "last 2 versions"})
