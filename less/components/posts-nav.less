@@ -1,36 +1,26 @@
 .posts-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 321px;
+  margin: 0 auto;
 
   .pagination-border();
 
-  &__prev-next {
-    .clearfix();
-  }
-
   &__prev {
     .link-style();
-    float: left;
     width: 46.5%;
   }
 
   &__next {
     .link-style();
-    float: right;
     width: 46.5%;
   }
 
   &__view-all {
     .link-style();
+    width: 100%;
     margin-bottom: 0;
   }
-}
-
-.link-style() {
-  text-decoration: none;
-  display: block;
-  padding: 15px 0;
-  border: 2px solid @bg-color-blue;
-  margin-bottom: 20px;
-  font-size: @font-size--h2;
-  font-weight: @font-weight--h2;
-  color: @text-color--h2;
 }
