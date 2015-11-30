@@ -57,12 +57,12 @@
           <h2 class="feedback__fieldset-name">представьтесь, пожалуйста</h2>
 
           <div class="feedback__field">
-            <label class="required__field" for="surname">фамилия:</label>
+            <label class="required__field" for="surname">фамилия:<span>*</span></label>
             <input type="text" id="surname" value="Иванов" required>
           </div>
 
           <div class="feedback__field">
-            <label class="required__field" for="name">имя:</label>
+            <label class="required__field" for="name">имя:<span>*</span></label>
             <input type="text" id="name" value="Петр" required>
           </div>
 
@@ -91,23 +91,26 @@
           <h2 class="feedback__fieldset-name">даты вашей поездки</h2>
 
           <div class="feedback__field">
-            <label class="required__field" for="arrival">дата приезда:</label>
+            <label class="required__field" for="arrival">дата приезда:<span>*</span></label>
             <input type="text" id="arrival" value="4 июля 2015" required>
           </div>
 
           <div class="feedback__field  feedback__field--counter">
-            <div class="required__wrapper">
-              <label class="required__field" for="days-amount">длительность пребывания:</label>
+            <label class="required__field" for="days-amount">длительность пребывания:<span>*</span></label>
+
+            <div class="feedback__counter-container">
+
+              <button class="btn__counter--left icon-minus">&nbsp;</button>
+              <div class="feedback__counter-placeholder">
+                <input type="number" id="days-amount" value="14" min="1" max="365" required>
+              </div>
+              <button class="btn__counter--right icon-plus">&nbsp;</button>
+
             </div>
-            <button class="btn__counter--left icon-minus">&nbsp;</button>
-            <div class="feedback__counter-wrapper">
-              <input type="number" id="days-amount" value="14" min="1" max="365" required>
-            </div>
-            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
           <div class="feedback__field  feedback__field--calculated">
-            <label class="required__field" for="departure">дата отъезда:</label>
+            <label class="required__field" for="departure">дата отъезда:<span>*</span></label>
             <input type="text" id="departure" value="28 июля 2015" required>
           </div>
         </section>
@@ -116,14 +119,18 @@
           <h2 class="feedback__fieldset-name">путешественники</h2>
 
           <div class="feedback__field  feedback__field--counter">
-            <div class="required__wrapper">
-              <label class="required__field" for="person-amount">количество путешественников:</label>
+
+            <label class="required__field" for="person-amount">количество путешественников:<span>*</span></label>
+
+            <div class="feedback__counter-container">
+
+              <button class="btn__counter--left icon-minus">&nbsp;</button>
+              <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
+                <input type="number" id="person-amount" value="2" min="1" max="10" required>
+              </div>
+              <button class="btn__counter--right icon-plus">&nbsp;</button>
+
             </div>
-            <button class="btn__counter--left icon-minus">&nbsp;</button>
-            <div class="feedback__counter-wrapper  feedback__counter-wrapper--person">
-              <input type="number" id="person-amount" value="2" min="1" max="10" required>
-            </div>
-            <button class="btn__counter--right icon-plus">&nbsp;</button>
           </div>
 
           <div class="person">
@@ -136,12 +143,12 @@
 
             <div class="person__details">
               <div class="feedback__field">
-                <label class="required__field" for="surname-1">фамилия:</label>
+                <label class="required__field" for="surname-1">фамилия:<span>*</span></label>
                 <input type="text" id="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
-                <label class="required__field" for="name-1">имя:</label>
+                <label class="required__field" for="name-1">имя:<span>*</span></label>
                 <input type="text" id="name-1" value="Петр" required>
               </div>
 
@@ -162,12 +169,12 @@
 
             <div class="person__details">
               <div class="feedback__field">
-                <label class="required__field" for="surname-2">фамилия:</label>
+                <label class="required__field" for="surname-2">фамилия:<span>*</span></label>
                 <input type="text" id="surname-2" value="Второй" required>
               </div>
 
               <div class="feedback__field">
-                <label class="required__field" for="name-2">имя:</label>
+                <label class="required__field" for="name-2">имя:<span>*</span></label>
                 <input type="text" id="name-2" value="Петр" required>
               </div>
 
