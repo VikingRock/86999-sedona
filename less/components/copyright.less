@@ -2,21 +2,25 @@
   padding: 7px 0 35px;
 
   a {
-    position: relative;
     text-decoration: none;
     color: @text-color;
-    margin-left: -39px;
 
     &::after {
       content: '';
-      position: absolute;
-      top: -8px;
-      right: -51px;
+      position: relative;
+      top: 17px;
+      right: -11px;
       display: inline-block;
       width: 40px;
       height: 40px;
       background: url("../img/htmlacademy.svg") no-repeat;
       background-size: 70%;
     }
+  }
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+    width: 30%;
   }
 }
