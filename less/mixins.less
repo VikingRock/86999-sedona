@@ -1,16 +1,3 @@
-.clearfix{
-  zoom:1;
-  &:before, &:after {
-    content: "";
-    display: table;
-    height: 0;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
 .pagination-border() {
   padding: 45px @container-padding--mobile 44px;
   border-top: 2px solid @bg-color-grey;
@@ -26,4 +13,17 @@
   font-size: @font-size--h2;
   font-weight: @font-weight--h2;
   color: @text-color--h2;
+}
+
+.poster-bkg(@x, @y, @bg-size-triangle, @bg-size, @padding-top, @padding-bottom) {
+  background:
+    url("../img/intro-triangle.svg") 50% 100% no-repeat,
+    url("../img/sedona-poster.jpg") @x @y no-repeat,
+    @bg-color-blue--light;
+  background-size:
+    @bg-size-triangle,
+    @bg-size,
+    auto;
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
 }

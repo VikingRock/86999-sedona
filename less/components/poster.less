@@ -1,8 +1,8 @@
 .poster {
-  .poster-bkg(50%, 97%, 324px, 48px, 80px);
+  .poster-bkg(50%, 97%, auto, 324px, 48px, 80px);
 
   &--big {
-    .poster-bkg(50%, 0, 768px, 47px, 48px);
+    .poster-bkg(50%, 0, auto, 768px, 47px, 48px);
   }
 
   img {
@@ -17,17 +17,29 @@
   &__sedona {
     padding-bottom: 67px;
   }
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+    &--big {
+      .poster-bkg(50%, 0, 102%, 100%, 76px, 84px);
+    }
+
+    &__welcome {
+      width: 256px;
+      padding-bottom: 52px;
+    }
+
+    &__sedona {
+      width: 458px;
+      padding-bottom: 54px;
+    }
+
+    &__sucks {
+      width: 298px;
+      //padding-bottom: 67px;
+    }
+  }
 }
 
-.poster-bkg(@x, @y, @bg-size, @padding-top, @padding-bottom) {
-  background:
-    url("../img/intro-triangle.svg") 50% 100% no-repeat,
-    url("../img/sedona-poster.jpg") @x @y no-repeat,
-    @bg-color-blue--light;
-  background-size:
-    auto,
-    @bg-size,
-    auto;
-  padding-top: @padding-top;
-  padding-bottom: @padding-bottom;
-}
