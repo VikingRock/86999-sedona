@@ -14,8 +14,11 @@
   }
 
   &__fieldset-name {
-    text-align: center;
-    margin: 0 auto 27px;
+
+    h2 {
+      text-align: center;
+      margin: 0 auto 27px;
+    }
   }
 
   &__counter-placeholder {
@@ -243,5 +246,63 @@
 
   &__submit {
     padding: 9px @container-padding--mobile 0;
+  }
+
+
+
+//==================================================================
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+    padding: 16px 59px 80px;
+
+    &__fieldset {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 42px 0 58px;
+
+      input[type="text"] {
+        max-width: 176px;
+      }
+
+      &--fullname {
+
+      }
+
+      &--impression {
+        padding: 60px 0 45px;
+      }
+
+      &--dates {
+
+      }
+
+      &--people {
+
+      }
+
+      &--sights {
+
+      }
+
+      &--photos {
+
+      }
+    }
+
+    &__fieldset-name {
+      position: absolute;
+      width: 100%;
+      top: -14px;
+
+      h2 {
+        width: 50%;
+        background: @text-color--alternate;
+        font-size: 2.1rem;
+      }
+    }
   }
 }
