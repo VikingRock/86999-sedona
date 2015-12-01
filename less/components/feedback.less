@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 0 0 80px;
-  max-width: 768px;
   margin: 0 auto;
 
   &__fieldset {
@@ -56,7 +55,7 @@
       position: relative;
     }
 
-    .required__field span {
+    .required__field span:last-child {
       position: relative;
       top: 0;
       color: red;
@@ -69,7 +68,8 @@
       font-weight: @font-weight--h2;
     }
 
-    input:not([type="radio"]):not([type="checkbox"]) {
+    input[type="text"],
+    input[type="number"] {
       display: block;
       width: 100%;
       padding: 18px 0 17px 22px;
@@ -78,8 +78,10 @@
       border: none;
     }
 
-    input[type="text"]#departure {
-      border: 2px solid @bg-color-grey--dark;
+    &--calculated {
+      input[type="text"] {
+        border: 2px solid @bg-color-grey--dark;
+      }
     }
 
     &--radio {
@@ -136,8 +138,7 @@
         font-size: 2.3rem;
       }
 
-      input[type="number"]#person-amount,
-      input[type="number"]#days-amount {
+      input[type="number"] {
         position: relative;
         min-width: 145px;
         max-width: 200px;
@@ -249,7 +250,6 @@
   }
 
 
-
 //==================================================================
 
 
@@ -265,7 +265,7 @@
       padding: 42px 0 58px;
 
       input[type="text"] {
-        max-width: 176px;
+        width: 176px;
       }
 
       &--fullname {
@@ -277,11 +277,16 @@
       }
 
       &--dates {
-
+        padding: 42px 0 54px;
       }
 
       &--people {
+        flex-direction: column;
+        align-items: stretch;
 
+        input[type="text"] {
+          width: 190px;
+        }
       }
 
       &--sights {
@@ -302,6 +307,34 @@
         width: 50%;
         background: @text-color--alternate;
         font-size: 2.1rem;
+      }
+    }
+
+    &__counter-container {
+      justify-content: center;
+    }
+
+    &__counter-placeholder {
+      margin: 0;
+      width: 53px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__field {
+
+      &--counter {
+
+        label[for="person-amount"] {
+          padding: 0;
+        }
+
+        input[type="number"] {
+          min-width: 53px;
+          padding: 18px 10px 17px;
+        }
       }
     }
   }

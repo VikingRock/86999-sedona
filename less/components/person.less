@@ -24,4 +24,21 @@
     background: @bg-color-grey;
     border: none;
   }
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+    justify-content: space-between;
+
+    &__sequence {
+      width: 61px;
+      padding: 0;
+    }
+
+    &__details {
+      width: 582px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
