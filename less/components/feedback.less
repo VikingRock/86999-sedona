@@ -1,25 +1,34 @@
 .feedback {
+  display: flex;
+  flex-direction: column;
   padding: 0 0 80px;
+  margin: 0 auto;
 
   &__fieldset {
+    display: flex;
+    flex-direction: column;
     padding: 18px @container-padding--mobile 3px;
     border-top: 1px solid @border-color--reason;
     text-align: left;
   }
 
   &__fieldset-name {
-    text-align: center;
+
+    h2 {
+      text-align: center;
+      margin: 0 auto 27px;
+    }
   }
 
-  &__counter-wrapper {
+  &__counter-placeholder {
     position: relative;
+    margin: 0 6px;
 
     &::after {
       content: "дн.";
       position: absolute;
-      z-index: 1;
-      right: 80px;
-      bottom: -53px;
+      left: 114px;
+      bottom: 40px;
       color: @bg-color-grey--dark;
     }
 
@@ -28,7 +37,15 @@
     }
   }
 
+  &__counter-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 320px;
+  }
+
   &__field {
+    display: flex;
+    flex-direction: column;
     font-weight: @font-weight--h2;
 
     label {
@@ -37,12 +54,12 @@
       position: relative;
     }
 
-    .required__field::after {
-      content: '*';
-      color: red;
-      position: absolute;
+    .required__field span:last-child {
+      position: relative;
       top: 0;
-      right: -9px;
+      color: red;
+      left: 3px;
+      width: 20px;
     }
 
     input {
@@ -50,7 +67,8 @@
       font-weight: @font-weight--h2;
     }
 
-    input:not([type="radio"]):not([type="checkbox"]) {
+    input[type="text"],
+    input[type="number"] {
       display: block;
       width: 100%;
       padding: 18px 0 17px 22px;
@@ -59,8 +77,10 @@
       border: none;
     }
 
-    input[type="text"]#departure {
-      border: 2px solid @bg-color-grey--dark;
+    &--calculated {
+      input[type="text"] {
+        border: 2px solid @bg-color-grey--dark;
+      }
     }
 
     &--radio {
@@ -96,14 +116,12 @@
     }
 
     &--counter {
-      .clearfix();
+      align-self: center;
 
       button[class^="btn__counter"] {
-        float: left;
         width: 61px;
         position: relative;
-        padding: 20px 0 20px 22px;
-        margin: 14px 0 0;
+        margin: 10px 0 20px;
         border: none;
         background: @bg-color-grey;
         color: @bg-color-grey--dark;
@@ -113,18 +131,15 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        z-index: 1;
         width: 100%;
         padding: 18px 25px;
         font-size: 2.3rem;
       }
 
-      input[type="number"]#person-amount,
-      input[type="number"]#days-amount {
-        float: left;
+      input[type="number"] {
         position: relative;
-        width: 145px;
-        margin: 14px 6px 23px;
+        min-width: 145px;
+        max-width: 200px;
       }
     }
 
@@ -156,7 +171,6 @@
         position: absolute;
         top: -15px;
         left: 0;
-        z-index: 1;
         width: 56px;
         height: 56px;
         border-radius: 6px;
@@ -169,7 +183,6 @@
         visibility: hidden;
         top: 3px;
         left: 18px;
-        z-index: 1;
         width: 21px;
         height: 14px;
         border: 4px solid @text-color--h1;
@@ -185,12 +198,16 @@
   }
 
   &__gallery {
-    .clearfix();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__upload {
     margin-top: -13px;
     padding-bottom:55px;
+    text-align: center;
 
     input[type="file"] {
       width: 0.1px;
@@ -205,12 +222,9 @@
 
   &__photo {
     position: relative;
-    float: left;
     padding-bottom: 31px;
 
-    &:not(:nth-child(3n)){
-      padding-right: 35px;
-    }
+    width: 26%;
 
     .cancel-upload {
       position: absolute;
@@ -230,5 +244,154 @@
 
   &__submit {
     padding: 9px @container-padding--mobile 0;
+  }
+
+
+//==================================================================
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+    padding: 16px 59px 100px;
+
+    &__fieldset {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 42px 0 58px;
+
+      input[type="text"] {
+        width: 176px;
+      }
+
+      &--fullname {
+
+      }
+
+      &--impression {
+        padding: 60px 0 45px;
+      }
+
+      &--dates {
+        padding: 42px 0 54px;
+      }
+
+      &--people {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 42px 0 72px;
+
+        input[type="text"] {
+          width: 190px;
+        }
+      }
+
+      &--sights {
+        flex-direction: row;
+        justify-content: center;
+        padding: 83px 0 22px;
+      }
+
+      &--photos {
+        flex-direction: column;
+        padding: 83px 0 20px;
+      }
+    }
+
+    &__fieldset-name {
+      position: absolute;
+      width: 100%;
+      top: -14px;
+
+      &--long {
+        top: -28px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      h2 {
+        width: 50%;
+        background: @text-color--alternate;
+        font-size: 2.1rem;
+        line-height: 1.3;
+      }
+    }
+
+    &__counter-container {
+      justify-content: center;
+    }
+
+    &__counter-placeholder {
+      margin: 0;
+      width: 53px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__field {
+
+      &--counter {
+
+        label[for="person-amount"] {
+          padding: 0;
+        }
+
+        input[type="number"] {
+          min-width: 53px;
+          padding: 18px 10px 17px;
+        }
+      }
+
+      &--check {
+        margin: 0 0 65px 0;
+        width: 36%;
+
+        &:nth-child(2) {
+          order: 1;
+          margin: 0 0 65px 0;
+        }
+
+        &:nth-child(3) {
+          order: 3;
+        }
+
+        &:nth-child(4) {
+          order: 2;
+          padding-left: 30px;
+        }
+
+        &:last-child {
+          order: 4;
+          margin: 0 0 65px 0;
+          padding-left: 30px;
+        }
+      }
+    }
+
+    &__gallery {
+      justify-content: space-around;
+      padding-top: 32px;
+    }
+
+    &__photo {
+      flex-basis: 33.33%;
+      text-align: center;
+
+      img {
+        width: 140px;
+      }
+
+      .cancel-upload {
+        width: 60px;
+        height: 60px;
+        left: 150px;
+        top: -30px;
+        padding-top: 20px;
+        font-size: 1.5rem;
+      }
+    }
   }
 }
