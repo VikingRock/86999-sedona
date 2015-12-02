@@ -164,12 +164,55 @@
       &--bottom {
         border-bottom: 2px solid @bg-color-grey;
       }
+
+      &--lonely {
+        border-top: 2px solid @bg-color-grey;
+
+        h2 {
+          font-size: 40px;
+          line-height: 1.1;
+          margin: 39px 0 21px 0;
+        }
+
+        p {
+          font-size: 2.2rem;
+        }
+      }
     }
 
     &__line {
       display: block;
       width: 2px;
       border: 1px solid @bg-color-grey;
+    }
+
+    &__meta {
+
+      &--lonely {
+        text-align: center;
+        margin: -10px auto 30px;
+        background: white;
+        width: 328px;
+      }
+    }
+
+    &__text {
+      padding: 7px 45px 0;
+
+      ul {
+        //margin: 28px 0 29px;
+        padding-left: 37px;
+      }
+
+      li {
+        &::before {
+          left: -35px;
+        }
+      }
+
+      blockquote {
+        padding: 0 179px 0 35px;
+      }
     }
   }
 }
