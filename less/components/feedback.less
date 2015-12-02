@@ -23,12 +23,13 @@
   &__counter-placeholder {
     position: relative;
     margin: 0 6px;
+    width: 145px;
 
     &::after {
       content: "дн.";
       position: absolute;
       left: 114px;
-      bottom: 40px;
+      bottom: 20px;
       color: @bg-color-grey--dark;
     }
 
@@ -41,6 +42,7 @@
     display: flex;
     flex-direction: row;
     max-width: 320px;
+    margin: 10px 0 20px;
   }
 
   &__field {
@@ -67,8 +69,7 @@
       font-weight: @font-weight--h2;
     }
 
-    input[type="text"],
-    input[type="number"] {
+    input[type="text"] {
       display: block;
       width: 100%;
       padding: 18px 0 17px 22px;
@@ -121,25 +122,19 @@
       button[class^="btn__counter"] {
         width: 61px;
         position: relative;
-        margin: 10px 0 20px;
         border: none;
         background: @bg-color-grey;
         color: @bg-color-grey--dark;
       }
 
       button[class^="btn__counter"]::before {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 18px 25px;
         font-size: 2.3rem;
       }
 
-      input[type="number"] {
+      input[type="text"] {
         position: relative;
-        min-width: 145px;
         max-width: 200px;
+        margin: 0;
       }
     }
 
@@ -259,6 +254,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
       padding: 42px 0 58px;
 
       input[type="text"] {
@@ -296,6 +292,7 @@
       &--photos {
         flex-direction: column;
         padding: 83px 0 20px;
+        align-items: stretch;
       }
     }
 
@@ -339,8 +336,8 @@
           padding: 0;
         }
 
-        input[type="number"] {
-          min-width: 53px;
+        input[type="text"] {
+          width: 53px;
           padding: 18px 10px 17px;
         }
       }
