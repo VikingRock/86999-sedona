@@ -29,4 +29,21 @@
       color: @text-color--h1;
     }
   }
+
+
+
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+
+    &::before {
+      content: 'страница:';
+      position: absolute;
+      left: 44px;
+      top: 60px;
+      font-size: 2.1rem;
+      font-weight: 700;
+    }
+  }
 }

@@ -153,11 +153,17 @@
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
     }
 
     &__excerpt {
       flex: 1 0 37%;
       margin: 0 36px;
+
+      &--bottom {
+        border-bottom: 2px solid @bg-color-grey;
+      }
     }
 
     &__line {
