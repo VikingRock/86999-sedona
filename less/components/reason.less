@@ -18,6 +18,8 @@
   }
 
 
+//========================== tablet ========================
+
 
   @media(min-width: @screen-md) {
     width: 33%;
@@ -33,6 +35,22 @@
       &:not(:last-child) {
         border-bottom: none;
       }
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 52px 83px 1px;
+
+    .feature {
+      padding: 0 35px;
+    }
+
+    &--plain {
+      padding: 45px 83px 1px;
     }
   }
 }
