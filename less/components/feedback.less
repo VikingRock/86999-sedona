@@ -28,7 +28,7 @@
     &::after {
       content: "дн.";
       position: absolute;
-      left: 114px;
+      left: 100px;
       bottom: 20px;
       color: @bg-color-grey--dark;
     }
@@ -81,6 +81,7 @@
     &--calculated {
       input[type="text"] {
         border: 2px solid @bg-color-grey--dark;
+        height: 58px;
       }
     }
 
@@ -242,8 +243,7 @@
   }
 
 
-//==================================================================
-
+//========================== tablet ========================
 
 
   @media(min-width: @screen-md) {
@@ -300,11 +300,10 @@
       position: absolute;
       width: 100%;
       top: -14px;
+      .centralize-absolute-el();
 
       &--long {
         top: -28px;
-        right: 50%;
-        transform: translateX(50%);
       }
 
       h2 {
@@ -389,6 +388,107 @@
         top: -30px;
         padding-top: 20px;
         font-size: 1.5rem;
+      }
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    width: 958px;
+    padding: 16px 0 100px;
+
+    &__fieldset {
+
+      input[type="text"] {
+        width: 278px;
+      }
+
+      &--impression {
+        justify-content: center;
+      }
+
+      &--dates {
+        padding: 42px 0 58px;
+      }
+
+      &--sights {
+        justify-content: space-between;
+        padding: 83px 0 30px;
+      }
+    }
+
+    &__fieldset-name {
+
+      h2 {
+        width: 42%;
+      }
+    }
+
+    &__counter-container {
+      justify-content: space-between;
+    }
+
+    &__counter-placeholder {
+      margin: 0 6px;
+      width: 143px;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &__field {
+
+      &--counter {
+        align-self: flex-start;
+
+        label[for="person-amount"] {
+          padding: 0 0 0 22px;
+        }
+
+        input[type="text"] {
+          width: 100%;
+          padding: 18px 0 17px 22px;
+          text-align: left;
+        }
+      }
+
+      input[type="text"].surname {
+        width: 211px;
+      }
+
+      &--radio {
+        width: 37%;
+        text-align: center;
+      }
+
+      &--check {
+        width: 21%;
+
+        &:nth-child(n+4) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__gallery {
+      justify-content: space-between;
+      padding-top: 32px;
+    }
+
+    &__photo {
+      flex-basis: 140px;
+      text-align: left;
+
+      &:last-child {
+        margin-right: 200px;
+      }
+
+      .cancel-upload {
+        left: 110px;
       }
     }
   }

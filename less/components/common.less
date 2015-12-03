@@ -66,14 +66,14 @@ ul {
 .tablet-text {
   display: none;
 
-  @media(min-width: @screen-md) {
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: inline;
   }
 }
 
 .mobile-text {
 
-  @media(min-width: @screen-md) {
+  @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: none;
   }
 }
@@ -84,5 +84,6 @@ ul {
   @media(min-width: @screen-md) {
     display: block;
     padding: 14px 0 0 0;
+    margin: 0;
   }
 }

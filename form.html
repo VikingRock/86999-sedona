@@ -165,7 +165,7 @@
             <div class="person__details">
               <div class="feedback__field">
                 <label class="required__field" for="surname-1">фамилия:<span>*</span></label>
-                <input type="text" id="surname-1" value="Иванов" required>
+                <input class="surname" type="text" id="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
@@ -191,7 +191,7 @@
             <div class="person__details">
               <div class="feedback__field">
                 <label class="required__field" for="surname-2">фамилия:<span>*</span></label>
-                <input type="text" id="surname-2" value="Второй" required>
+                <input class="surname" type="text" id="surname-2" value="Второй" required>
               </div>
 
               <div class="feedback__field">
@@ -247,6 +247,7 @@
           <div class="feedback__upload">
             <input type="file" name="file" id="file"  accept="image/jpeg,image/png,image/gif" multiple>
             <label class="btn  btn--secondary" for="file">выбрать фотографии</label>
+            <label class="btn  btn--drag" for="file">перетащите фотографии сюда</label>
           </div>
 
           <div class="feedback__gallery">

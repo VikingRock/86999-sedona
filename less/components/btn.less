@@ -11,20 +11,37 @@
   line-height: @line-height;
   cursor: pointer;
   padding: 19px 0;
+  width: 100%;
 
   &--big {
-    width: 100%;
     max-width: 458px;
   }
 
   &--modal {
-    width: 100%;
     max-width: 270px;
   }
 
   &--secondary {
-    width: 100%;
     background: @bg-color-grey;
     color: @bg-color-grey--dark;
+  }
+
+  &--drag {
+    display: none;
+  }
+
+
+  //========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+
+    &--secondary {
+      display: none;
+    }
+
+    &--drag {
+      display: inline-block;
+    }
   }
 }
