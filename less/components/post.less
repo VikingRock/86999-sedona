@@ -144,11 +144,9 @@
     }
   }
 
-  &__line {display: none}
 
 
-
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+  @media(min-width: @screen-md) {
 
     &__container {
       flex-direction: row;
@@ -160,6 +158,17 @@
     &__excerpt {
       flex: 1 0 37%;
       margin: 0 36px;
+      position: relative;
+
+      &:nth-child(2n-1)::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 101%;
+        top: 0;
+        right: -37px;
+        border: 1px solid @bg-color-grey;
+      }
 
       &--bottom {
         border-bottom: 2px solid @bg-color-grey;
@@ -167,6 +176,10 @@
 
       &--lonely {
         border-top: 2px solid @bg-color-grey;
+
+        &::after {
+          display: none;
+        }
 
         h2 {
           font-size: 40px;
@@ -178,12 +191,6 @@
           font-size: 2.2rem;
         }
       }
-    }
-
-    &__line {
-      display: block;
-      width: 2px;
-      border: 1px solid @bg-color-grey;
     }
 
     &__meta {
