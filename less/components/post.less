@@ -145,6 +145,8 @@
   }
 
 
+//========================== tablet ========================
+
 
   @media(min-width: @screen-md) {
 
@@ -170,7 +172,7 @@
         border: 1px solid @bg-color-grey;
       }
 
-      &--bottom {
+      &:nth-last-child(-n+2) {
         border-bottom: 2px solid @bg-color-grey;
       }
 
@@ -219,6 +221,32 @@
 
       blockquote {
         padding: 0 179px 0 35px;
+      }
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    &__excerpt {
+      flex: 1 0 27%;
+      margin: 0 36px;
+      position: relative;
+
+      &:not(:nth-child(3n))::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 101%;
+        top: 0;
+        right: -37px;
+        border: 1px solid @bg-color-grey;
+      }
+
+      &:nth-last-child(-n+3) {
+        border-bottom: 2px solid @bg-color-grey;
       }
     }
   }

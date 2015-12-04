@@ -31,6 +31,8 @@
   }
 
 
+//========================== tablet ========================
+
 
   @media(min-width: @screen-md) {
     border-top: none;
@@ -44,6 +46,19 @@
       top: 60px;
       font-size: 2.1rem;
       font-weight: 700;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 57px 20px 9px;
+
+    &::before {
+      left: 146px;
+      top: 72px;
     }
   }
 }
