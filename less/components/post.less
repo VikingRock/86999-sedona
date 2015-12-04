@@ -183,6 +183,10 @@
           display: none;
         }
 
+        &:first-child {
+          border-bottom: none;
+        }
+
         h2 {
           font-size: 40px;
           line-height: 1.1;
@@ -248,6 +252,20 @@
       &:nth-last-child(-n+3) {
         border-bottom: 2px solid @bg-color-grey;
       }
+
+      &--lonely {
+        padding: 0 69px;
+        margin: 0 auto;
+        width: 800px;
+
+        &:first-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__text {
+      padding: 7px 200px 0;
     }
   }
 }
