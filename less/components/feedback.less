@@ -475,20 +475,21 @@
     }
 
     &__gallery {
-      justify-content: space-between;
+      justify-content: flex-start;
       padding-top: 32px;
     }
 
     &__photo {
       flex-basis: 140px;
       text-align: left;
-
-      &:last-child {
-        margin-right: 200px;
-      }
+      margin-right: 64px;
 
       .cancel-upload {
-        left: 110px;
+          left: 110px;
+      }
+
+      &:nth-child(5n){
+        margin-right: 0;
       }
     }
   }
