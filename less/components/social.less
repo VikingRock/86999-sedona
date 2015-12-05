@@ -1,22 +1,30 @@
 .social {
-
+  font-size: 0;
   margin: 0 auto 13px;
 
   &__btn {
     display: inline-block;
     vertical-align: middle;
-    width: 48px;
+    width: 46px;
     text-decoration: none;
     background: @bg-color-blue;
     color: @text-color--alternate;
     font-size: 2.2rem;
     padding: 10px 0;
+    margin: 0 6px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
+
+//================================ tablet
 
 
   @media(min-width: @screen-md) {
     width: 30%;
-    margin: 0 auto 36px;
+    margin: 0 auto;
+    padding: 19px 0 0 0;
   }
 }

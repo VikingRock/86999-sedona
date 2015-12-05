@@ -1,21 +1,17 @@
 .copyright {
-  padding: 7px 0 35px;
+  padding: 29px 0 0 0;
 
   a {
     text-decoration: none;
     color: @text-color;
+  }
 
-    &::after {
-      content: '';
-      position: relative;
-      top: 17px;
-      right: -11px;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: url("../img/htmlacademy.svg") no-repeat;
-      background-size: 70%;
-    }
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    width: 27px;
+    height: 34px;
   }
 
 
@@ -25,6 +21,7 @@
 
   @media(min-width: @screen-md) {
     width: 30%;
+    padding: 27px 0 0 20px;
   }
 
 
@@ -32,7 +29,6 @@
 
 
   @media(min-width: @screen-lg) {
-    padding: 7px 42px 35px;
-    text-align: right;
+    padding: 27px 0 0 142px;
   }
 }
