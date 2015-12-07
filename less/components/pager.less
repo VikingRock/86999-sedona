@@ -1,10 +1,15 @@
 .pager {
+  margin-bottom: -8px;
 
-  .pagination-border();
-
-  .clearfix();
+  .pagination-border(45px, 20px, 27px);
 
   ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 321px;
     list-style-type: none;
     padding: 0;
   }
@@ -16,22 +21,55 @@
     font-weight: @font-weight--h1;
     background-color: @bg-color-blue;
     display: block;
-    float: left;
     width: 58px;
-    margin: 0 16px 17px 0;
+    margin: 0 0 17px 0;
     padding: 15px 0;
 
-    li:nth-child(4n) & {
-      margin:0 0 16px 0;
+    &:hover {
+      background-color: @bg-color-blue--darker;
     }
 
-    li:last-child & {
-      margin: 0 16px 0 0;
+    &:active {
+      background-color: @bg-color-blue--darkest;
+      color: @text-color--blue;
     }
 
     &--active {
       background-color: @bg-color-grey;
       color: @text-color--h1;
+    }
+  }
+
+
+//========================== tablet ========================
+
+
+  @media(min-width: @screen-md) {
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    padding: 46px 20px 5px;
+
+    &::before {
+      content: 'страница:';
+      position: absolute;
+      left: 44px;
+      top: 60px;
+      font-size: 2.1rem;
+      font-weight: 700;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 57px 20px 17px;
+
+    &::before {
+      left: 146px;
+      top: 72px;
     }
   }
 }

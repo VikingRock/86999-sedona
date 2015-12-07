@@ -1,8 +1,17 @@
 .description {
   padding: 40px @container-padding--mobile 5px;
 
+  &--angled {
+    background: url("../img/alternative-triangle.svg") 50% 100% no-repeat;
+    padding-bottom: 39px;
+  }
+
   &--feedback {
-    padding: 74px @container-padding--mobile 10px;
+    padding: 74px @container-padding--mobile 15px;
+
+    h2 {
+      margin: 0 auto 25px;
+    }
   }
 
   &--blog {
@@ -10,6 +19,52 @@
       font-size: 3rem;
     }
 
-    padding-bottom: 24px;
+    padding: 41px @container-padding--mobile 24px;
+  }
+
+
+//========================== tablet ========================
+
+
+  @media(min-width: @screen-md) {
+    padding: 56px @container-padding--tablet 5px;
+
+    h2 {
+      font-size: 2.1rem;
+      line-height: 1.24;
+    }
+
+    &--angled {
+      background: none;
+      padding-bottom: 49px;
+    }
+
+    &--feedback {
+      padding: 67px 139px 54px;
+
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    &--blog {
+      padding: 67px 139px 47px;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 60px 355px 49px;
+
+    &--feedback {
+      padding: 105px 355px 54px;
+    }
+
+    &--blog {
+      padding: 104px 355px 58px;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .reason {
-  padding: 38px @container-padding--mobile 40px;
+  padding: 37px @container-padding--mobile 37px;
 
-  p {
+  p:not(.feature) {
     line-height: @line-height--alternate;
   }
 
@@ -10,10 +10,47 @@
   }
 
   &--plain {
-    padding: 26px 0;
+    padding: 23px 0;
 
     &:not(:last-child) {
       border-bottom: 1px solid @border-color--reason;
+    }
+  }
+
+
+//========================== tablet ========================
+
+
+  @media(min-width: @screen-md) {
+    width: 33%;
+    padding: 45px 45px 1px;
+
+    &__number {
+      margin: 9px 0 22px;
+    }
+
+    &--plain {
+      padding: 45px 47px 42px;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 52px 83px 1px;
+
+    .feature {
+      padding: 0 35px;
+    }
+
+    &--plain {
+      padding: 45px 83px 1px;
     }
   }
 }

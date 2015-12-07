@@ -9,12 +9,13 @@
   <title>Седона</title>
 </head>
 <body>
+
   <div class="page-container">
 
     <header class="page-header">
       <nav class="main-nav">
         <ul>
-          <li class="main-nav__item">
+          <li class="main-nav__item  main-nav__item--active">
             <a href="#">информация</a>
           </li>
           <li class="main-nav__item">
@@ -26,16 +27,16 @@
           <li class="main-nav__item">
             <a href="hotels.html">гостиницы</a>
           </li>
+          <li class="main-nav__logo">
+            <a href="#">
+              <img src="img/logo-sedona@1x.png" width="67" alt="sedona logo">
+            </a>
+          </li>
         </ul>
 
-        <div class="icon-menu"></div>
-        <div class="icon-close"></div>
+        <a class="icon-menu" href="#"></a>
+        <a class="icon-close" href="#"></a>
 
-        <div class="logo">
-          <a class="logo__link" href="index.html" >
-            <img src="img/logo.png" width="138" alt="sedona logo">
-          </a>
-        </div>
       </nav>
     </header>
 
@@ -43,15 +44,15 @@
       <div class="poster  poster--big">
         <img class="poster__welcome" src="img/welcome.svg" width="196" alt="Welcome to the gorgeous">
         <img class="poster__sedona" src="img/sedona.svg" width="280" alt="SEDONA">
-        <img class="poster__sucks" src="img/sucks.svg" width="197" alt="Because the Grand Canyon sucks!">
+        <img class="poster__sucks" src="img/text-becausecanyon.svg" width="197" alt="Because the Grand Canyon sucks!">
       </div>
 
-      <section class="description">
+      <section class="description  description--angled">
         <h2>седона — небольшой  городок в аризоне,  заслуживающий большего!</h2>
         <p>рассмотрим 5 причин, по которым седона круче чем гранд каньон!</p>
       </section>
 
-      <div class="reason-container  reason-container--angled">
+      <div class="reason-container">
         <section class="reason">
           <p class="feature">настоящий городок</p>
           <p class="reason__number">— №1 —</p>
@@ -79,7 +80,7 @@
         </div>
       </section>
 
-      <div class="reason-container">
+      <div class="reason-container  reason-container--flip">
         <section class="reason">
           <p class="feature">там есть мост дьявола</p>
           <p class="reason__number">— №2 —</p>
@@ -97,7 +98,7 @@
         <section class="reason  reason--plain">
           <p class="feature">небольшая площадь</p>
           <p class="reason__number">— №3 —</p>
-          <p>все достопримечательности находятся очень близко</p>
+          <p>все достопримеча&shy;тельности находятся очень близко</p>
         </section>
         <section class="reason  reason--plain">
           <p class="feature">красивая дорога</p>
@@ -125,7 +126,7 @@
 
     <footer class="page-footer">
       <div class="hashtag">
-        <p class="feature  feature--big">#visitsedona</p>
+        <p class="hashtag__label">#visitsedona</p>
       </div>
 
       <div class="social">
@@ -135,7 +136,14 @@
       </div>
 
       <div class="copyright">
-        <a href="https://htmlacademy.ru" target="_blank">разработано</a>
+        <a href="https://htmlacademy.ru" target="_blank">
+          разработано
+          <svg class="copyright__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 374" width="296" height="374">
+            <polygon class="outline" fill="none" stroke="black" points="9,25 148,11 286,25 286,280 148,362 9,280 9,25" stroke-width="19"/>
+            <polygon class="top" fill="none" stroke="black" points="7,148 148,67 289,148 148,233" stroke-width="14"/>
+            <polygon class="bottom" fill="black" stroke="none" points="148,225 168,212 148,199 148,186 180,205 190,200 148,174 148,159 203,193 213,185 148,145 148,132 236,186 236,243 148,296 59,243 59,228 148,282 148,268 59,215 59,202 148,254"/>
+          </svg>
+        </a>
       </div>
     </footer>
 

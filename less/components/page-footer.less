@@ -1,19 +1,17 @@
-.hashtag {
-  padding: 0 0 30px 0;
-
-  &__label {
-    font-size: @font-size--button;
-    font-weight: @font-weight--h2;
-  }
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 29px 0 36px 0;
 
 
 //========================== tablet ========================
 
 
-
   @media(min-width: @screen-md) {
-    width: 30%;
-    padding: 23px 0 0 28px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 17px;
   }
 
 
@@ -21,6 +19,6 @@
 
 
   @media(min-width: @screen-lg) {
-    padding: 23px 0 0 39px;
+
   }
 }

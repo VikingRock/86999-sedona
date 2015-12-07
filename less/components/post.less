@@ -6,17 +6,19 @@
   }
 
   &__container {
-    padding: 0 @container-padding--mobile;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
   }
 
   &__excerpt {
     border-top: 2px solid @bg-color-grey;
-    padding: 33px 0 34px;
+    padding: 33px 0 32px;
 
     h2 {
       line-height: @line-height--excerpt;
       font-size: 2.1rem;
-      margin-bottom: 21px;
+      margin-bottom: 22px;
     }
 
     &--lonely {
@@ -43,8 +45,8 @@
   }
 
   &__meta {
-
     text-align: left;
+    margin: 16px 0 0 0;
 
     a {
       text-decoration: none;
@@ -52,30 +54,33 @@
       font-size: 1.4rem;
       line-height: @line-height--alternate;
       font-style: italic;
-      position: relative;
       text-align: left;
-      padding-left: 35px;
     }
 
     a::before {
+      display: inline-block;
+      margin-right: 5px;
       content: "";
-      position: absolute;
-      left: 17px;
-      bottom: 6px;
       width: 11px;
       height: 11px;
     }
 
     &--lonely {
-      margin: -7px 0 30px 0;
+      margin: -7px 0 26px 0;
+      padding-left: 10px;
+
+      .post__date {
+        margin-right: 39px;
+      }
     }
   }
 
   &__date {
     display: inline-block;
+    margin-right: 18px;
 
     &::before {
-      background: url("../img/meta-sprite.png") 0 0 no-repeat;
+      background: url("../img/blog-calendar.svg") 0 0 no-repeat;
     }
   }
 
@@ -83,19 +88,19 @@
     display: inline-block;
 
     &::before {
-      background: url("../img/meta-sprite.png") 100% 0 no-repeat;
+      background: url("../img/blog-flag.svg") 100% 0 no-repeat;
     }
   }
 
   &__text {
     text-align: left;
     padding: 0 @container-padding--mobile 0;
-    margin: -12px 0 44px 0;
+    margin: -12px 0 43px 0;
 
     h3 {
       line-height: 0.87;
       font-size: 3rem;
-      margin-top: 42px;
+      margin-top: 43px;
     }
 
     p {
@@ -139,6 +144,142 @@
     cite {
       text-transform: capitalize;
       color: @bg-color-brown;
+    }
+  }
+
+
+//========================== tablet ========================
+
+
+  @media(min-width: @screen-md) {
+
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    &__excerpt {
+      flex: 1 0 37%;
+      margin: 0 36px;
+      position: relative;
+      padding: 33px 0 6px;
+
+      &:nth-child(2n-1)::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 101%;
+        top: 0;
+        right: -37px;
+        border: 1px solid @bg-color-grey;
+      }
+
+      &:nth-last-child(-n+2) {
+        border-bottom: 2px solid @bg-color-grey;
+      }
+
+      &--lonely {
+        border-top: 2px solid @bg-color-grey;
+
+        &::after {
+          display: none;
+        }
+
+        &:first-child {
+          border-bottom: none;
+        }
+
+        h2 {
+          font-size: 40px;
+          line-height: 1.1;
+          margin: 39px 0 21px 0;
+        }
+
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    &__meta {
+      padding-left: 26px;
+
+      &--lonely {
+        padding-left: 0;
+        text-align: center;
+        margin: -43px auto 30px;
+        background: white;
+        width: 328px;
+      }
+    }
+
+    &__text {
+      padding: 0 45px 0;
+
+      ul {
+        //margin: 28px 0 29px;
+        padding-left: 37px;
+      }
+
+      li {
+        &::before {
+          left: -35px;
+        }
+      }
+
+      blockquote {
+        padding: 0 179px 0 35px;
+      }
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    &__excerpt {
+      flex: 1 0 27%;
+      margin: 0 36px;
+      position: relative;
+      padding: 33px 12px 33.5px;
+
+      &:not(:nth-child(3n))::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 101%;
+        top: 0;
+        right: -37px;
+        border: 1px solid @bg-color-grey;
+      }
+
+      &:nth-last-child(-n+3) {
+        border-bottom: 2px solid @bg-color-grey;
+      }
+
+      &--lonely {
+        padding: 0 69px;
+        margin: 0 auto;
+        width: 800px;
+
+        &:first-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__meta {
+
+      &--lonely {
+        margin: -11px auto 30px;
+      }
+    }
+
+    &__text {
+      padding: 7px 200px 0;
     }
   }
 }
