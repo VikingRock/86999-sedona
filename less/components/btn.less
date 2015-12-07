@@ -11,20 +11,78 @@
   line-height: @line-height;
   cursor: pointer;
   padding: 19px 0;
-  max-width: 458px;
+  width: 100%;
+
+  &:hover {
+    background-color: @bg-color-blue--darker;
+  }
+
+  &:active {
+    background-color: @bg-color-blue--darkest;
+    color: @text-color--blue;
+  }
 
   &--big {
-    width: 100%;
+    max-width: 458px;
   }
 
   &--modal {
-    width: 100%;
     max-width: 270px;
   }
 
-  &--secondary {
-    width: 100%;
-    background: @bg-color-grey;
+  &--grey {
+    background: @bg-color-grey--light;
     color: @bg-color-grey--dark;
+
+    &:hover {
+      background: @bg-color-grey--disabled;
+    }
+
+    &:active {
+      background: @bg-color-grey--down;
+      color: @bg-color-grey--counter;
+    }
   }
+
+  &--disabled {
+    background: @bg-color-grey--disabled;
+    color: white;
+
+    &:hover,
+    &:active {
+      background: @bg-color-grey--disabled;
+      color: white;
+    }
+  }
+
+  &--in-progress {
+    animation-name: coloring;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  &--drag {
+    display: none;
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+
+    &--grey {
+      display: none;
+    }
+
+    &--drag {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes coloring {
+  from { background-color: #5496bd; }
+  50%  { background-color: #3e64ae; }
+  to { background-color: #5496bd; }
 }

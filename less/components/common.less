@@ -14,6 +14,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: @text-color;
+  background-color: @bg-color-grey--light;
 }
 
 h1 {
@@ -51,7 +52,7 @@ ul {
 
 
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+  @media(min-width: @screen-md) {
     font-size: @font-size--button;
     line-height: 1.24;
 
@@ -80,8 +81,10 @@ ul {
 .fig-caption {
   display: none;
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+  @media(min-width: @screen-md) {
     display: block;
     padding: 14px 0 0 0;
+    margin: 0;
+    text-align: left;
   }
 }

@@ -1,5 +1,7 @@
 .pager {
-  .pagination-border();
+  margin-bottom: -8px;
+
+  .pagination-border(45px, 20px, 27px);
 
   ul {
     display: flex;
@@ -23,6 +25,14 @@
     margin: 0 0 17px 0;
     padding: 15px 0;
 
+    &:hover {
+      background-color: @bg-color-blue--darker;
+    }
+
+    &:active {
+      background-color: @bg-color-blue--darkest;
+      color: @text-color--blue;
+    }
 
     &--active {
       background-color: @bg-color-grey;
@@ -31,11 +41,14 @@
   }
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     border-top: none;
     border-bottom: none;
     position: relative;
+    padding: 46px 20px 5px;
 
     &::before {
       content: 'страница:';
@@ -44,6 +57,19 @@
       top: 60px;
       font-size: 2.1rem;
       font-weight: 700;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 57px 20px 17px;
+
+    &::before {
+      left: 146px;
+      top: 72px;
     }
   }
 }

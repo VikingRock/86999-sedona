@@ -1,5 +1,5 @@
-.pagination-border() {
-  padding: 45px @container-padding--mobile 44px;
+.pagination-border(@padding-top, @padding-side, @padding-bottom) {
+  padding: @padding-top @padding-side @padding-bottom;
   border-top: 2px solid @bg-color-grey;
   border-bottom: 2px solid @bg-color-grey;
 }
@@ -8,11 +8,21 @@
   text-decoration: none;
   display: block;
   padding: 15px 0;
-  border: 2px solid @bg-color-blue;
+  border: 2px solid @bg-color-blue--darker;
   margin-bottom: 20px;
   font-size: @font-size--h2;
   font-weight: @font-weight--h2;
   color: @text-color--h2;
+
+  &:hover {
+    background-color: @bg-color-blue--darker;
+    color: white;
+  }
+
+  &:active {
+    background-color: @bg-color-blue--darkest;
+    color: @text-color--blue;
+  }
 }
 
 .poster-bkg(@x, @y, @bg-size-triangle, @bg-size, @padding-top, @padding-bottom) {
@@ -26,4 +36,9 @@
     auto;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
+}
+
+.centralize-absolute-el() {
+  right: 50%;
+  transform: translateX(50%);
 }

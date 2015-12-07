@@ -35,8 +35,10 @@
   }
 
 
+  //========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 0 47px;
@@ -63,6 +65,18 @@
         background-size: 66px;
         background-position: 50% 56px;
       }
+    }
+  }
+
+
+  //========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 0 0 68px;
+
+    &__item {
+      padding: 159px 73px 0;
     }
   }
 }

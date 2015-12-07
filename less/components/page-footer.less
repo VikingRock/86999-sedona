@@ -1,14 +1,24 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  padding-top: 29px;
+  padding: 29px 0 36px 0;
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     flex-direction: row;
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-start;
     padding-top: 17px;
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+
   }
 }

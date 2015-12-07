@@ -7,7 +7,7 @@
   }
 
   &--feedback {
-    padding: 74px @container-padding--mobile 14px;
+    padding: 74px @container-padding--mobile 15px;
 
     h2 {
       margin: 0 auto 25px;
@@ -19,12 +19,14 @@
       font-size: 3rem;
     }
 
-    padding-bottom: 24px;
+    padding: 41px @container-padding--mobile 24px;
   }
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     padding: 56px @container-padding--tablet 5px;
 
     h2 {
@@ -38,7 +40,7 @@
     }
 
     &--feedback {
-      padding: 67px 139px 53px;
+      padding: 67px 139px 54px;
 
       h2 {
         font-size: 3rem;
@@ -47,6 +49,22 @@
 
     &--blog {
       padding: 67px 139px 47px;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 60px 355px 49px;
+
+    &--feedback {
+      padding: 105px 355px 54px;
+    }
+
+    &--blog {
+      padding: 104px 355px 58px;
     }
   }
 }

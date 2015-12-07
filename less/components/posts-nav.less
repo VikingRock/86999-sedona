@@ -4,9 +4,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 321px;
-  margin: 0 auto;
+  margin: 0 auto 14px;
 
-  .pagination-border();
+  .pagination-border(45px, 20px, 49px);
 
   &__prev {
     .link-style();
@@ -25,13 +25,15 @@
   }
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     flex-wrap: nowrap;
     max-width: 100%;
     border-top: none;
     border-bottom: none;
-    padding: 13px 45px 45px 45px;
+    padding: 15px 45px 0 45px;
 
     &__prev {
       width: 31%;
@@ -46,6 +48,26 @@
 
     &__view-all {
       width: 31%;
+    }
+  }
+
+
+  //========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 14px 200px 23px;
+
+    &__prev {
+      width: 26.5%;
+    }
+
+    &__next {
+      width: 26.5%;
+    }
+
+    &__view-all {
+      width: 26.5%;
     }
   }
 }

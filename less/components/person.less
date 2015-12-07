@@ -1,7 +1,7 @@
 .person {
   display: flex;
   flex-direction: row;
-  margin: 17px 0 0;
+  margin: 22px 0 0 0;
 
   &__sequence {
     width: 23.92%;
@@ -26,8 +26,10 @@
   }
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+  @media(min-width: @screen-md) {
     justify-content: space-between;
     margin: 13px 0 0;
 
@@ -40,6 +42,17 @@
       width: 582px;
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+
+    &__details {
+      width: 891px;
     }
   }
 }

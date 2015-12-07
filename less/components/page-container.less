@@ -1,8 +1,18 @@
 .page-container {
   margin: 0 auto;
   width: @screen-sm;
+  background-color: @text-color--alternate;
+  box-shadow: 0 0 15px 5px fade(#000101, 20%);
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+
+  @media(min-width: @screen-md) {
     width: @screen-md;
+  }
+
+
+
+  @media(min-width: @screen-lg) {
+    width: @screen-lg;
   }
 }

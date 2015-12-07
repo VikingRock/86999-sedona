@@ -1,26 +1,52 @@
 .copyright {
-  padding: 7px 0 35px;
+  padding: 29px 0 0 0;
 
   a {
     text-decoration: none;
     color: @text-color;
+  }
 
-    &::after {
-      content: '';
-      position: relative;
-      top: 17px;
-      right: -11px;
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      background: url("../img/htmlacademy.svg") no-repeat;
-      background-size: 70%;
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    width: 27px;
+    height: 34px;
+
+    &:hover {
+      .outline, .top {
+        stroke: @bg-color-blue;
+      }
+      .bottom {
+        fill: @bg-color-blue;
+      }
+    }
+
+    &:active {
+      .outline, .top {
+        stroke: @bg-color-grey--dark;
+      }
+      .bottom {
+        fill: @bg-color-grey--dark;
+      }
     }
   }
 
 
+//========================== tablet ========================
 
-  @media(min-width: @screen-md) and (max-width: @screen-lg) {
+
+
+  @media(min-width: @screen-md) {
     width: 30%;
+    padding: 27px 0 0 20px;
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    padding: 27px 0 0 142px;
   }
 }
