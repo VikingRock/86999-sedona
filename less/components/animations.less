@@ -1,0 +1,15 @@
+@keyframes coloring {
+  from { background-color: #5496bd; }
+  50%  { background-color: #3e64ae; }
+  to { background-color: #5496bd; }
+}
+
+@keyframes error {
+  from { background-color: @bg-color-grey--light; }
+  to { background-color: coral; }
+}
+
+.red-animation {
+  animation-name: error;
+  animation-duration: 0.5s;
+}
