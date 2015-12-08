@@ -38,6 +38,7 @@
 
       var el = this.classList;
       el.add("red-animation");
+
       setTimeout(function() {
         el.remove("red-animation");
       }, 1000);
