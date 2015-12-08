@@ -6,6 +6,8 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var concat = require('gulp-concat');
+var runSequence = require('run-sequence');
+var del = require('del');
 
 gulp.task("style", function() {
   return gulp.src("less/style.less")
@@ -21,12 +23,22 @@ gulp.task("start", ["style"], function() {
   gulp.watch("less/**/*.less", ["style"]);
 });
 
-gulp.task('scripts', function() {
-  return gulp.src('./js/*.js',!'./js/script.js')
+gulp.task('scripts-clear', function() {
+  return del(['./js/script.js']);
+});
+
+gulp.task('scripts-build', function() {
+  return gulp.src(['./js/*.js','!./js/script.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('./js/'));
 });
 
+gulp.task('scripts', function() {
+  runSequence(
+    'scripts-clear',
+    'scripts-build'
+  );
+});
 
 // Оставьте эту строку в самом конце файла
 require("./.gosha");
