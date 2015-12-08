@@ -14,13 +14,15 @@
   "homepage": "https://github.com/up-htmlacademy/86999-sedona",
   "dependencies": {
     "autoprefixer": "6.1.x",
+    "del": "^2.2.0",
     "eclint": "1.1.x",
     "fs-extra": "0.26.x",
     "gulp": "3.9.x",
     "gulp-concat": "^2.6.0",
     "gulp-less": "3.0.x",
     "gulp-plumber": "1.0.x",
-    "gulp-postcss": "6.0.x"
+    "gulp-postcss": "6.0.x",
+    "run-sequence": "^1.1.5"
   },
   "scripts": {
     "pregosha": "npm install > /dev/null",
