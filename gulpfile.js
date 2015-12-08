@@ -5,6 +5,7 @@ var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var concat = require('gulp-concat');
 
 gulp.task("style", function() {
   return gulp.src("less/style.less")
@@ -20,6 +21,11 @@ gulp.task("start", ["style"], function() {
   gulp.watch("less/**/*.less", ["style"]);
 });
 
+gulp.task('scripts', function() {
+  return gulp.src('./js/*.js',!'./js/script.js')
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('./js/'));
+});
 
 
 // Оставьте эту строку в самом конце файла

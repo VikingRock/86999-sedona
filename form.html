@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
   <title>Седона - Оставить отзыв</title>
 </head>
 <body>
@@ -28,8 +29,15 @@
             <a href="hotels.html">гостиницы</a>
           </li>
           <li class="main-nav__logo">
-            <a href="index.html">
-              <img src="img/logo-sedona@1x.png" width="67" alt="sedona logo">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="img/logo-sedona@3x.png 3x,
+                          img/logo-sedona@2x.png 2x,
+                          img/logo-sedona@1x.png 1x"
+                >
+                <img src="img/logo-sedona@1x.png" width="67" alt="sedona logo">
+              </picture>
             </a>
           </li>
         </ul>
@@ -116,11 +124,11 @@
 
             <div class="feedback__counter-container">
 
-              <button class="btn__counter--left icon-minus"></button>
+              <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder">
-                <input type="text" id="days-amount" value="14" required>
+                <input type="text" id="days-amount" value="14" data-max="30" required>
               </div>
-              <button class="btn__counter--right icon-plus"></button>
+              <button class="btn__counter--right icon-plus" type="button"></button>
 
             </div>
           </div>
@@ -145,11 +153,11 @@
 
             <div class="feedback__counter-container">
 
-              <button class="btn__counter--left icon-minus"></button>
+              <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="text" id="person-amount" value="2" required>
+                <input type="text" id="person-amount" value="2" data-max="10" required>
               </div>
-              <button class="btn__counter--right icon-plus"></button>
+              <button class="btn__counter--right icon-plus" type="button"></button>
 
             </div>
           </div>
@@ -341,5 +349,6 @@
 
   </div>
 
+  <script src="js/counter-handler.js"></script>
 </body>
 </html>
