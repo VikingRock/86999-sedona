@@ -116,11 +116,11 @@
 
             <div class="feedback__counter-container">
 
-              <button class="btn__counter--left icon-minus"></button>
+              <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder">
-                <input type="text" id="days-amount" value="14" required>
+                <input type="text" id="days-amount" value="14" data-max="30" required>
               </div>
-              <button class="btn__counter--right icon-plus"></button>
+              <button class="btn__counter--right icon-plus" type="button"></button>
 
             </div>
           </div>
@@ -145,11 +145,11 @@
 
             <div class="feedback__counter-container">
 
-              <button class="btn__counter--left icon-minus"></button>
+              <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="text" id="person-amount" value="2" required>
+                <input type="text" id="person-amount" value="2" data-max="10" required>
               </div>
-              <button class="btn__counter--right icon-plus"></button>
+              <button class="btn__counter--right icon-plus" type="button"></button>
 
             </div>
           </div>
@@ -341,5 +341,6 @@
 
   </div>
 
+  <script src="js/counter-handler.js"></script>
 </body>
 </html>
