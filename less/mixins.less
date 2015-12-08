@@ -28,7 +28,7 @@
 .poster-bkg(@x, @y, @bg-size-triangle, @bg-size, @padding-top, @padding-bottom) {
   background:
     url("../img/intro-triangle.svg") 50% 100% no-repeat,
-    url("../img/sedona-poster.jpg") @x @y no-repeat,
+    url("../img/photo-background@1x.jpg") @x @y no-repeat,
     @bg-color-blue--light;
   background-size:
     @bg-size-triangle,
@@ -36,6 +36,18 @@
     auto;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background:
+      url("../img/intro-triangle.svg") 50% 100% no-repeat,
+      url("../img/photo-background@2x.jpg") @x @y no-repeat,
+      @bg-color-blue--light;
+    background-size:
+      @bg-size-triangle,
+      @bg-size,
+      auto;
+  }
 }
 
 .centralize-absolute-el() {
