@@ -1,3 +1,4 @@
+// test
 (function() {
 
   // get all + and - buttons and add event handler onclick for them
@@ -17,19 +18,19 @@
 
     if (this.classList[0].indexOf("left") !=-1) {
 
-      var counterIncVal = parseInt(this.nextElementSibling.childNodes[1].value);     //getting value of the next element > 2nd child
-      if (counterIncVal > 0) {
-        this.nextElementSibling.childNodes[1].value = counterIncVal - 1;
+      var counterDecVal = parseInt(this.nextElementSibling.childNodes[1].value);     //getting value of the next element > 2nd child
+      if (counterDecVal > 0) {
+        this.nextElementSibling.childNodes[1].value = counterDecVal - 1;
         isOutOfLimit = false;
       }
     }
 
     if(this.classList[0].indexOf("right") !=-1) {
 
-      var counterDecVal = parseInt(this.previousElementSibling.childNodes[1].value);  //getting value of the prev element > 2nd child
+      var counterIncVal = parseInt(this.previousElementSibling.childNodes[1].value);  //getting value of the prev element > 2nd child
       var maxVal = parseInt(this.previousElementSibling.childNodes[1].getAttribute("data-max"));
-      if (counterDecVal < maxVal) {
-        this.previousElementSibling.childNodes[1].value = counterDecVal + 1;
+      if (counterIncVal < maxVal) {
+        this.previousElementSibling.childNodes[1].value = counterIncVal + 1;
         isOutOfLimit = false;
       }
     }
