@@ -35,7 +35,7 @@
 
           area.appendChild(divContainer);
         });
-        
+
         reader.readAsDataURL(file);
       }
     }
