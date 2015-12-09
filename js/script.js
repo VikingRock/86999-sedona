@@ -49,12 +49,13 @@
 
 })();
 
-//(function() {
+(function() {
 
-  // get all + and - buttons and add event handler onclick for them
+  if (!("FormData" in window)) {
+    return;
+  }
 
   var crosses = document.querySelectorAll(".cancel-upload");
-
   for (var i = 0; i < crosses.length; i++) {
     if (crosses[i].addEventListener)
       crosses[i].addEventListener("click", deletePhoto, false);
@@ -62,37 +63,40 @@
       crosses[i].attachEvent('onclick', deletePhoto);
   }
 
-  function deletePhoto(){
-
-    //console.log(this);
-    var imgName = this.nextSibling.nextSibling.textContent;
-    var allFiles = document.querySelector("#image-upload").files;
-    //console.log(allFiles);
-
-    for (var i= allFiles.length-1; i>=0; i--) {
-      if (allFiles[i].name == imgName) {
-        //allFiles.splice(i, 1);
-      }
-    }
-    console.log(allFiles);
-    this.parentNode.remove();
-
-  }
-
-//})();
-
-(function() {
-
-  if (!("FormData" in window)) {
-    return;
-  }
+  var deletedArr = [];      //array with names of deleted files
 
   var form = document.querySelector(".feedback");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
+    var allFiles = document.querySelector("#image-upload").files;
+    var copyArr = [];                                         //copy of array with loaded files
+    for (var i= allFiles.length-1; i>=0; i--) {
+      copyArr[i] = allFiles[i];
+    }
+    document.querySelector("#image-upload").value = "";       //deleting all uploaded files
+
+    console.log(copyArr);
+    console.log(deletedArr);
+
+    for (var i = copyArr.length - 1; i >= 0; i--) {
+      for (var j = deletedArr.length - 1; j >= 0; j--) {
+        if(copyArr[i].name == deletedArr[j]) {
+          copyArr.splice(i,1);
+        }
+      }
+    }
+
+    console.log(copyArr);
+
     var data = new FormData(form);
+
+    for (var i = copyArr.length - 1; i >= 0; i--) {
+      data.append(i, copyArr[i], copyArr[i].name);
+    }
+
+
     request(data, function(response) {
       console.log(response);
     });
@@ -110,9 +114,6 @@
     xhr.send(data);
   }
 
-})();
-
-(function() {
   if ("FileReader" in window) {
     var area = document.querySelector(".feedback__gallery");
     document.querySelector("#image-upload").addEventListener("change", function() {
@@ -153,6 +154,14 @@
         reader.readAsDataURL(file);
       }
     }
+  }
+
+  function deletePhoto(){
+
+    var imgName = this.nextSibling.nextSibling.textContent;
+    deletedArr.push(imgName);
+
+    this.parentNode.remove();
   }
 
 })();
