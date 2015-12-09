@@ -1,3 +1,4 @@
+// test
 (function() {
 
   // get all + and - buttons and add event handler onclick for them

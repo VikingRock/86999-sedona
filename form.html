@@ -60,7 +60,7 @@
       </section>
 
 
-      <form class="feedback" action="" method="post">
+      <form class="feedback" action="" method="post" enctype="multipart/form-data">
 
 
         <section class="feedback__fieldset  feedback__fieldset--fullname">
@@ -71,17 +71,17 @@
 
           <div class="feedback__field">
             <label class="required__field" for="surname">фамилия:<span>*</span></label>
-            <input type="text" id="surname" value="Иванов" required>
+            <input type="text" id="surname" name="surname" value="Иванов" required>
           </div>
 
           <div class="feedback__field">
             <label class="required__field" for="name">имя:<span>*</span></label>
-            <input type="text" id="name" value="Петр" required>
+            <input type="text" id="name" name="name" value="Петр" required>
           </div>
 
           <div class="feedback__field">
             <label for="middle-name">отчество:</label>
-            <input type="text" id="middle-name" value="Александрович">
+            <input type="text" id="middle-name" name="middle-name" value="Александрович">
           </div>
 
         </section>
@@ -114,7 +114,7 @@
 
           <div class="feedback__field">
             <label class="required__field" for="arrival">дата приезда:<span>*</span></label>
-            <input type="text" id="arrival" value="4 июля 2015" required>
+            <input type="text" id="arrival" name="arrival" value="4 июля 2015" required>
           </div>
 
           <div class="feedback__field  feedback__field--counter">
@@ -126,7 +126,7 @@
 
               <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder">
-                <input type="text" id="days-amount" value="14" data-max="30" required>
+                <input type="text" id="days-amount" name="days-amount" value="14" data-max="30" required>
               </div>
               <button class="btn__counter--right icon-plus" type="button"></button>
 
@@ -135,7 +135,7 @@
 
           <div class="feedback__field  feedback__field--calculated">
             <label class="required__field" for="departure">дата отъезда:<span>*</span></label>
-            <input type="text" id="departure" value="28 июля 2015" required>
+            <input type="text" id="departure" name="departure" value="28 июля 2015" required>
           </div>
 
         </section>
@@ -155,7 +155,7 @@
 
               <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="text" id="person-amount" value="2" data-max="10" required>
+                <input type="text" id="person-amount" name="person-amount" value="2" data-max="10" required>
               </div>
               <button class="btn__counter--right icon-plus" type="button"></button>
 
@@ -173,17 +173,17 @@
             <div class="person__details">
               <div class="feedback__field">
                 <label class="required__field" for="surname-1">фамилия:<span>*</span></label>
-                <input class="surname" type="text" id="surname-1" value="Иванов" required>
+                <input class="surname" type="text" id="surname-1" name="surname-1" value="Иванов" required>
               </div>
 
               <div class="feedback__field">
                 <label class="required__field" for="name-1">имя:<span>*</span></label>
-                <input type="text" id="name-1" value="Петр" required>
+                <input type="text" id="name-1" name="name-1" value="Петр" required>
               </div>
 
               <div class="feedback__field">
                 <label for="middle-name-1">отчество:</label>
-                <input type="text" id="middle-name-1" value="Александрович">
+                <input type="text" id="middle-name-1" name="middle-name-1" value="Александрович">
               </div>
             </div>
           </div>
@@ -199,17 +199,17 @@
             <div class="person__details">
               <div class="feedback__field">
                 <label class="required__field" for="surname-2">фамилия:<span>*</span></label>
-                <input class="surname" type="text" id="surname-2" value="Второй" required>
+                <input class="surname" type="text" id="surname-2" name="surname-2" value="Второй" required>
               </div>
 
               <div class="feedback__field">
                 <label class="required__field" for="name-2">имя:<span>*</span></label>
-                <input type="text" id="name-2" value="Петр" required>
+                <input type="text" id="name-2" name="name-2" value="Петр" required>
               </div>
 
               <div class="feedback__field">
                 <label for="middle-name-2">отчество:</label>
-                <input type="text" id="middle-name-2" value="Александрович">
+                <input type="text" id="middle-name-2" name="middle-name-2" value="Александрович">
               </div>
             </div>
           </div>
@@ -224,22 +224,22 @@
           </div>
 
           <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="devil" value="devil" checked>
+            <input type="checkbox" id="devil" name="sights" value="devil" checked>
             <label for="devil">Мост Дьявола</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="slide" value="slide">
+            <input type="checkbox" id="slide" name="sights" value="slide">
             <label for="slide">Слайд-парк</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="bell" value="bell" checked>
+            <input type="checkbox" id="bell" name="sights" value="bell" checked>
             <label for="bell">Гора-Колокол</label>
           </div>
 
           <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="mountains" value="mountains" checked>
+            <input type="checkbox" id="mountains" name="sights" value="mountains" checked>
             <label for="mountains">Красные скалы</label>
           </div>
 
@@ -253,41 +253,41 @@
           </div>
 
           <div class="feedback__upload">
-            <input type="file" name="file" id="file"  accept="image/jpeg,image/png,image/gif" multiple>
-            <label class="btn  btn--grey" for="file">выбрать фотографии</label>
-            <label class="btn  btn--drag" for="file">перетащите фотографии сюда</label>
+            <input type="file" name="image-upload" id="image-upload"  accept="image/jpeg,image/png,image/gif" multiple>
+            <label class="btn  btn--grey" for="image-upload">выбрать фотографии</label>
+            <label class="btn  btn--drag" for="image-upload">перетащите фотографии сюда</label>
           </div>
 
           <div class="feedback__gallery">
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-686.jpg" alt="1" width="70">
               <div class="fig-caption">img-686.jpg</div>
             </div>
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-687.jpg" alt="3" width="70">
               <div class="fig-caption">img-687.jpg</div>
             </div>
 
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-688.jpg" alt="4" width="70">
               <div class="fig-caption">img-688.jpg</div>
             </div>
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-689.jpg" alt="5" width="70">
               <div class="fig-caption">img-689.jpg</div>
             </div>
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-690.jpg" alt="6" width="70">
               <div class="fig-caption">img-690.jpg</div>
             </div>
 
             <div class="feedback__photo">
-              <a class="cancel-upload icon-close" href=""></a>
+              <a class="cancel-upload icon-close"></a>
               <img src="img/uploaded@2x/img-691.jpg" alt="7" width="70">
               <div class="fig-caption">img-691.jpg</div>
             </div>
@@ -349,6 +349,6 @@
 
   </div>
 
-  <script src="js/counter-handler.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
