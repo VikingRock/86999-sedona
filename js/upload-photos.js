@@ -18,7 +18,7 @@
 
           var link = document.createElement("a");
           link.classList.add("cancel-upload", "icon-close");
-          link.href = "";
+          link.addEventListener("click", deletePhoto, false);
 
           var img = document.createElement("img");
           img.src = event.target.result;
