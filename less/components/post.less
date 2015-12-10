@@ -59,6 +59,7 @@
 
     a::before {
       display: inline-block;
+      vertical-align: baseline;
       margin-right: 5px;
       content: "";
       width: 11px;
@@ -77,6 +78,7 @@
 
   &__date {
     display: inline-block;
+    vertical-align: baseline;
     margin-right: 18px;
 
     &::before {
@@ -86,6 +88,7 @@
 
   &__tag {
     display: inline-block;
+    vertical-align: baseline;
 
     &::before {
       background: url("../img/blog-flag.svg") 100% 0 no-repeat;
@@ -254,6 +257,10 @@
         top: 0;
         right: -37px;
         border: 1px solid @bg-color-grey;
+      }
+
+      &:nth-child(3n)::after {
+        display: none;
       }
 
       &:nth-last-child(-n+3) {
