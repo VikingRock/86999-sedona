@@ -6,11 +6,12 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 1px 0 0;
+    padding: 0;
     margin-bottom: 58px;
   }
 
   &__item {
+    display: none;
     background-color: @bg-color-blue;
     border-bottom: 2px groove @border-color--menu;
     padding: 0;
@@ -55,6 +56,7 @@
   }
 
   .icon-close {
+    display: none;
     position: absolute;
     right: 17px;
     top: 13px;
@@ -89,6 +91,7 @@
     }
 
     &__item {
+      display: list-item;
       width: 20%;
       border-bottom: none;
       background-color: inherit;
