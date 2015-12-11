@@ -65,14 +65,12 @@ ul {
 
 .tablet-text {
   display: none;
-
   @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: inline;
   }
 }
 
 .mobile-text {
-
   @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: none;
   }
@@ -89,5 +87,12 @@ ul {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  }
+}
+
+.mobile-visible {
+  visibility: visible !important;
+  @media(min-width: @screen-md) {
+    visibility: hidden;
   }
 }

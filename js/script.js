@@ -66,40 +66,42 @@
 
   var form = document.querySelector(".feedback");
 
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
+  if (form) {
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
 
-    var allFiles = document.querySelector("#image-upload").files;
-    var copyArr = [];                                         //copy of array with loaded files
-    for (var i= allFiles.length-1; i>=0; i--) {
-      copyArr[i] = allFiles[i];
-    }
-    document.querySelector("#image-upload").value = "";       //deleting all uploaded files
+      var allFiles = document.querySelector("#image-upload").files;
+      var copyArr = [];                                         //copy of array with loaded files
+      for (var i= allFiles.length-1; i>=0; i--) {
+        copyArr[i] = allFiles[i];
+      }
+      document.querySelector("#image-upload").value = "";       //deleting all uploaded files
 
-    console.log(copyArr);
-    console.log(deletedArr);
+      console.log(copyArr);
+      console.log(deletedArr);
 
-    for (var i = copyArr.length - 1; i >= 0; i--) {
-      for (var j = deletedArr.length - 1; j >= 0; j--) {
-        if(copyArr[i].name == deletedArr[j]) {
-          copyArr.splice(i,1);
+      for (var i = copyArr.length - 1; i >= 0; i--) {
+        for (var j = deletedArr.length - 1; j >= 0; j--) {
+          if(copyArr[i].name == deletedArr[j]) {
+            copyArr.splice(i,1);
+          }
         }
       }
-    }
 
-    console.log(copyArr);
+      console.log(copyArr);
 
-    var data = new FormData(form);
+      var data = new FormData(form);
 
-    for (var i = copyArr.length - 1; i >= 0; i--) {
-      data.append(i, copyArr[i], copyArr[i].name);
-    }
+      for (var i = copyArr.length - 1; i >= 0; i--) {
+        data.append(i, copyArr[i], copyArr[i].name);
+      }
 
 
-    request(data, function(response) {
-      console.log(response);
+      request(data, function(response) {
+        console.log(response);
+      });
     });
-  });
+  }
 
   function request(data, fn) {
     var xhr = new XMLHttpRequest();
@@ -115,12 +117,16 @@
 
   if ("FileReader" in window) {
     var area = document.querySelector(".feedback__gallery");
-    document.querySelector("#image-upload").addEventListener("change", function() {
-      var files = this.files;
-      for (var i = 0; i < files.length; i++) {
-        preview(files[i]);
-      }
-    });
+    var fileInput = document.querySelector("#image-upload");
+
+    if(fileInput) {
+      fileInput.addEventListener("change", function() {
+        var files = this.files;
+        for (var i = 0; i < files.length; i++) {
+          preview(files[i]);
+        }
+      });
+    }
 
     function preview(file) {
       if (file.type.match(/image.*/)) {
@@ -167,6 +173,61 @@
 
 (function() {
 
-  
+  var menuBtn = document.querySelector(".icon-menu");
+  var closeBtn = document.querySelector(".icon-close");
+  var menuItems = document.querySelectorAll(".main-nav__item");
+  var menuOpened = false;
+
+  if(menuBtn) {
+    menuBtn.addEventListener("click", toggleOpen, false);
+  }
+
+  function toggleOpen() {
+    if(menuOpened == true) {
+      toggleClose();
+      return;
+    }
+    closeBtn.classList.add("mobile-visible");
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].style.display = "list-item";
+    }
+    menuOpened = true;
+  }
+
+
+  if(closeBtn) {
+    closeBtn.addEventListener("click", toggleClose, false);
+  }
+
+  function toggleClose() {
+    closeBtn.classList.remove("mobile-visible");
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].style.display = "none";
+    }
+    menuOpened = false;
+  }
+
+  window.addEventListener("resize", function() {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      closeBtn.classList.remove("mobile-visible");
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "list-item";
+      }
+      menuOpened = false;
+    }
+    if ((window.matchMedia("(max-width: 768px)").matches)&&(menuOpened == false)) {
+      closeBtn.classList.remove("mobile-visible");
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "none";
+      }
+    }
+
+  });
 
 })();
+
+//window.matchMedia("(min-width: 400px)").matches
+
+//window.addEventListener("resize", function() {
+//  console.log("Ширина браузера изменилась");
+//});
