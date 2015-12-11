@@ -52,9 +52,3 @@
   });
 
 })();
-
-//window.matchMedia("(min-width: 400px)").matches
-
-//window.addEventListener("resize", function() {
-//  console.log("Ширина браузера изменилась");
-//});
