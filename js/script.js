@@ -6,9 +6,7 @@
 
   for (var i = 0; i < buttons.length; i++) {
     if (buttons[i].addEventListener)
-      buttons[i].addEventListener("click", incrementDecrement, false);
-    else if (buttons[i].attachEvent)
-      buttons[i].attachEvent('onclick', incrementDecrement);
+      buttons[i].addEventListener("tap", incrementDecrement, false);
   }
 
   function incrementDecrement(){
@@ -57,9 +55,7 @@
   var crosses = document.querySelectorAll(".cancel-upload");
   for (var i = 0; i < crosses.length; i++) {
     if (crosses[i].addEventListener)
-      crosses[i].addEventListener("click", deletePhoto, false);
-    else if (crosses[i].attachEvent)
-      crosses[i].attachEvent('onclick', deletePhoto);
+      crosses[i].addEventListener("tap", deletePhoto, false);
   }
 
   var deletedArr = [];      //array with names of deleted files
@@ -138,7 +134,7 @@
 
           var link = document.createElement("a");
           link.classList.add("cancel-upload", "icon-close");
-          link.addEventListener("click", deletePhoto, false);
+          link.addEventListener("tap", deletePhoto, false);
 
           var img = document.createElement("img");
           img.src = event.target.result;
@@ -179,7 +175,7 @@
   var menuOpened = false;
 
   if(menuBtn) {
-    menuBtn.addEventListener("click", toggleOpen, false);
+    menuBtn.addEventListener("tap", toggleOpen, false);
   }
 
   function toggleOpen() {
@@ -196,7 +192,7 @@
 
 
   if(closeBtn) {
-    closeBtn.addEventListener("click", toggleClose, false);
+    closeBtn.addEventListener("tap", toggleClose, false);
   }
 
   function toggleClose() {

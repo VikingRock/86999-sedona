@@ -6,9 +6,7 @@
 
   for (var i = 0; i < buttons.length; i++) {
     if (buttons[i].addEventListener)
-      buttons[i].addEventListener("click", incrementDecrement, false);
-    else if (buttons[i].attachEvent)
-      buttons[i].attachEvent('onclick', incrementDecrement);
+      buttons[i].addEventListener("tap", incrementDecrement, false);
   }
 
   function incrementDecrement(){
