@@ -19,33 +19,29 @@
     var isOutOfLimit = true;
 
     if (this.classList[0].indexOf("left") !=-1) {
-      var counter = this.nextElementSibling.childNodes[1];
-      counter.value = countPerson();
-      var counterDecVal = parseInt(counter.value);     //getting value of the next element > 2nd child
-      if (counterDecVal > 0) {
-        this.nextElementSibling.childNodes[1].value = counterDecVal - 1;
-        if (counter.id == "person-amount") {
+      var counterLeft = this.nextElementSibling.childNodes[1];
+      var counterDecVal = parseInt(counterLeft.value);                                    //getting value of the next element > 2nd child
+      var maxValLeft = parseInt(counterLeft.getAttribute("data-max"));
+      if ((counterDecVal > 0) && (counterDecVal <= maxValLeft)) {
+        if (counterLeft.id == "person-amount") {
           removePerson();
         }
+        counterLeft.value = counterDecVal - 1;
         isOutOfLimit = false;
-      } else {
-        counter.value = countPerson();
       }
     }
 
     if(this.classList[0].indexOf("right") !=-1) {
-      var counter = this.previousElementSibling.childNodes[1];
-      counter.value = countPerson();
-      var counterIncVal = parseInt(counter.value);                                    //getting value of the prev element > 2nd child
-      var maxVal = parseInt(this.previousElementSibling.childNodes[1].getAttribute("data-max"));
-      if ((counterIncVal < maxVal) && (counterIncVal >= 0)) {
-        this.previousElementSibling.childNodes[1].value = counterIncVal + 1;
-        if (counter.id == "person-amount") {
-          addPerson(counterIncVal);
+      var counterRight = this.previousElementSibling.childNodes[1];
+      var counterIncVal = parseInt(counterRight.value);                                    //getting value of the prev element > 2nd child
+      var maxValRight = parseInt(counterRight.getAttribute("data-max"));
+      if ((counterIncVal < maxValRight) && (counterIncVal >= 0)) {
+        if (counterRight.id == "person-amount") {
+          counterRight.value = countPerson();
+          addPerson(parseInt(counterRight.value));
         }
+        counterRight.value = counterIncVal + 1;
         isOutOfLimit = false;
-      } else {
-        counter.value = countPerson();
       }
     }
 
