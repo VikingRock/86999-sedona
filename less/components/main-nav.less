@@ -1,12 +1,12 @@
 .main-nav {
   position: relative;
-  background: linear-gradient(to bottom, @bg-color-blue 10%, white 50%);
+  background: @bg-color-blue--light;
 
   ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 1px 0 0;
+    padding: 0;
     margin-bottom: 58px;
   }
 
@@ -89,6 +89,7 @@
     }
 
     &__item {
+      display: list-item;
       width: 20%;
       border-bottom: none;
       background-color: inherit;

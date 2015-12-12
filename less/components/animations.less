@@ -1,12 +1,48 @@
 @keyframes coloring {
-  from { background-color: #5496bd; }
-  50%  { background-color: #3e64ae; }
-  to { background-color: #5496bd; }
+  from {
+    background-color: #5496bd;
+  }
+  50% {
+    background-color: #3e64ae;
+  }
+  to {
+    background-color: #5496bd;
+  }
 }
 
 @keyframes error {
-  from { background-color: @bg-color-grey--light; }
-  to { background-color: coral; }
+  from {
+    background-color: @bg-color-grey--light;
+  }
+  to {
+    background-color: coral;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-220px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-220px);
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.3s linear;
+}
+
+.slide-down {
+  animation: slide-down 0.3s linear;
 }
 
 .red-animation {

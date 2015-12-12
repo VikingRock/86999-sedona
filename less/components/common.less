@@ -51,6 +51,8 @@ ul {
   }
 
 
+//=========================================
+
 
   @media(min-width: @screen-md) {
     font-size: @font-size--button;
@@ -65,14 +67,12 @@ ul {
 
 .tablet-text {
   display: none;
-
   @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: inline;
   }
 }
 
 .mobile-text {
-
   @media(min-width: @screen-md) and (max-width: @screen-lg) {
     display: none;
   }
@@ -90,4 +90,8 @@ ul {
     white-space: nowrap;
     overflow: hidden;
   }
+}
+
+.invisible {
+  display: none;
 }
