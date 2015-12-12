@@ -155,36 +155,10 @@
 
               <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="text" id="person-amount" name="person-amount" value="2" data-max="10" required>
+                <input type="text" id="person-amount" name="person-amount" value="0" data-max="10" required>
               </div>
               <button class="btn__counter--right icon-plus" type="button"></button>
 
-            </div>
-          </div>
-
-          <div class="person">
-            <div class="person__sequence">
-              <div class="feedback__field">
-                <label>№</label>
-                <p class="person__number">1</p>
-              </div>
-            </div>
-
-            <div class="person__details">
-              <div class="feedback__field">
-                <label class="required__field" for="surname-1">фамилия:<span>*</span></label>
-                <input class="surname" type="text" id="surname-1" name="surname-1" value="Иванов" required>
-              </div>
-
-              <div class="feedback__field">
-                <label class="required__field" for="name-1">имя:<span>*</span></label>
-                <input type="text" id="name-1" name="name-1" value="Петр" required>
-              </div>
-
-              <div class="feedback__field">
-                <label for="middle-name-1">отчество:</label>
-                <input type="text" id="middle-name-1" name="middle-name-1" value="Александрович">
-              </div>
             </div>
           </div>
 
@@ -324,7 +298,7 @@
   </div>
 
   <script id="person-template" type="text/html">
-    <div class="person">
+
       <div class="person__sequence">
         <div class="feedback__field">
           <label>№</label>
@@ -348,7 +322,7 @@
           <input type="text" id="middle-name-{{number}}" name="middle-name-{{number}}">
         </div>
       </div>
-    </div>
+
   </script>
 
   <script src="bower_components/tap/dist/tap.min.js"></script>
