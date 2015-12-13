@@ -15,7 +15,7 @@ if (gulp.tasks.style && gulp.tasks.style.fn) {
 }
 
 gulp.task("gosha:clean", ["gosha:copy"], function(done) {
-  fs.remove("./gosha/{img,js,css}/README", done);
+  fs.remove("./gosha/{img,js,css,font}/README", done);
 });
 
 gulp.task("gosha", ["gosha:clean"]);
