@@ -69,7 +69,18 @@
       font-weight: @font-weight--h2;
     }
 
-    input[type="text"] {
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    input[type="text"],
+    input[type="number"] {
       display: block;
       width: 100%;
       padding: 18px 0 17px 22px;
@@ -169,7 +180,8 @@
         }
       }
 
-      input[type="text"] {
+      input[type="text"],
+      input[type="number"] {
         position: relative;
         max-width: 200px;
         margin: 0;
@@ -408,7 +420,8 @@
           padding: 0;
         }
 
-        input[type="text"] {
+        input[type="text"],
+        input[type="number"] {
           width: 53px;
           padding: 18px 10px 17px;
           text-align: center;
@@ -530,7 +543,8 @@
           padding: 0 0 0 22px;
         }
 
-        input[type="text"] {
+        input[type="text"],
+        input[type="number"] {
           width: 100%;
           padding: 18px 0 17px 22px;
           text-align: left;

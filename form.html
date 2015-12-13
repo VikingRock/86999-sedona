@@ -126,7 +126,7 @@
 
               <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder">
-                <input type="text" id="days-amount" name="days-amount" value="14" data-max="30" required>
+                <input type="number" id="days-amount" name="days-amount" value="14" max="30" min="0" data-max="30" required>
               </div>
               <button class="btn__counter--right icon-plus" type="button"></button>
 
@@ -155,62 +155,10 @@
 
               <button class="btn__counter--left icon-minus" type="button"></button>
               <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="text" id="person-amount" name="person-amount" value="2" data-max="10" required>
+                <input type="number" id="person-amount" name="person-amount" value="0" max="10" min="0" data-max="10" required>
               </div>
               <button class="btn__counter--right icon-plus" type="button"></button>
 
-            </div>
-          </div>
-
-          <div class="person">
-            <div class="person__sequence">
-              <div class="feedback__field">
-                <label>№</label>
-                <p class="person__number">1</p>
-              </div>
-            </div>
-
-            <div class="person__details">
-              <div class="feedback__field">
-                <label class="required__field" for="surname-1">фамилия:<span>*</span></label>
-                <input class="surname" type="text" id="surname-1" name="surname-1" value="Иванов" required>
-              </div>
-
-              <div class="feedback__field">
-                <label class="required__field" for="name-1">имя:<span>*</span></label>
-                <input type="text" id="name-1" name="name-1" value="Петр" required>
-              </div>
-
-              <div class="feedback__field">
-                <label for="middle-name-1">отчество:</label>
-                <input type="text" id="middle-name-1" name="middle-name-1" value="Александрович">
-              </div>
-            </div>
-          </div>
-
-          <div class="person">
-            <div class="person__sequence">
-              <div class="feedback__field">
-                <label>№</label>
-                <p class="person__number">2</p>
-              </div>
-            </div>
-
-            <div class="person__details">
-              <div class="feedback__field">
-                <label class="required__field" for="surname-2">фамилия:<span>*</span></label>
-                <input class="surname" type="text" id="surname-2" name="surname-2" value="Второй" required>
-              </div>
-
-              <div class="feedback__field">
-                <label class="required__field" for="name-2">имя:<span>*</span></label>
-                <input type="text" id="name-2" name="name-2" value="Петр" required>
-              </div>
-
-              <div class="feedback__field">
-                <label for="middle-name-2">отчество:</label>
-                <input type="text" id="middle-name-2" name="middle-name-2" value="Александрович">
-              </div>
             </div>
           </div>
 
@@ -349,6 +297,36 @@
 
   </div>
 
+  <script id="person-template" type="text/html">
+
+      <div class="person__sequence">
+        <div class="feedback__field">
+          <label>№</label>
+          <p class="person__number">{{number}}</p>
+        </div>
+      </div>
+
+      <div class="person__details">
+        <div class="feedback__field">
+          <label class="required__field" for="surname-{{number}}">фамилия:<span>*</span></label>
+          <input class="surname" type="text" id="surname-{{number}}" name="surname-{{number}}" required>
+        </div>
+
+        <div class="feedback__field">
+          <label class="required__field" for="name-{{number}}">имя:<span>*</span></label>
+          <input type="text" id="name-{{number}}" name="name-{{number}}" required>
+        </div>
+
+        <div class="feedback__field">
+          <label for="middle-name-{{number}}">отчество:</label>
+          <input type="text" id="middle-name-{{number}}" name="middle-name-{{number}}">
+        </div>
+      </div>
+
+  </script>
+
+  <script src="bower_components/tap/dist/tap.min.js"></script>
+  <script src="bower_components/mustache.js/mustache.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
