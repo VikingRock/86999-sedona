@@ -5,8 +5,16 @@
 
   document.getElementById("person-amount").readOnly = true;
   document.getElementById("days-amount").readOnly = true;
+  document.getElementById("departure").readOnly = true;
 
-  // get all + and - buttons and add event handler onclick for them
+  moment.locale("ru");
+
+  var arrivalDate = document.getElementById("arrival");
+  var departureDate = document.getElementById("departure");
+  var daysAmount = document.getElementById("days-amount");
+
+  arrivalDate.value = moment().subtract(parseInt(daysAmount.value), "d").format("D MMMM YYYY");
+  modifyDate(0);
 
   var buttons = document.querySelectorAll("button[class^='btn__counter']");
   var template = document.querySelector("#person-template").innerHTML;
@@ -15,6 +23,10 @@
   for (var i = 0; i < buttons.length; i++) {
     if (buttons[i].addEventListener)
       buttons[i].addEventListener("tap", incrementDecrement, false);
+  }
+
+  if (arrivalDate.addEventListener) {
+    arrivalDate.addEventListener("blur", arrivalDateModified, false);
   }
 
   function incrementDecrement(){
@@ -28,6 +40,8 @@
       if ((counterDecVal > 0) && (counterDecVal <= maxValLeft)) {
         if (counterLeft.id == "person-amount") {
           removePerson();
+        } else {
+          modifyDate(-1);
         }
         counterLeft.value = counterDecVal - 1;
         isOutOfLimit = false;
@@ -42,6 +56,8 @@
         if (counterRight.id == "person-amount") {
           counterRight.value = countPerson();
           addPerson(parseInt(counterRight.value));
+        } else {
+          modifyDate(1);
         }
         counterRight.value = counterIncVal + 1;
         isOutOfLimit = false;
@@ -75,6 +91,19 @@
   function countPerson() {
     var persons = document.querySelectorAll(".person");
     return persons.length;
+  }
+
+  function arrivalDateModified() {
+    if (moment(arrivalDate.value, "D MMMM YYYY").isValid() === false) {
+      arrivalDate.value = moment().subtract(parseInt(daysAmount.value), "d").format("D MMMM YYYY");
+    }
+    modifyDate(0);
+  }
+
+  function modifyDate(modifier) {
+    departureDate.value = moment(arrivalDate.value, "D MMMM YYYY")
+      .add(parseInt(daysAmount.value) + modifier, "d")
+      .format("D MMMM YYYY");
   }
 
 })();
