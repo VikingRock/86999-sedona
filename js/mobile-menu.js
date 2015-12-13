@@ -11,7 +11,7 @@
   closeBtn.classList.add("invisible");
 
   if(menuBtn) {
-    menuBtn.addEventListener("click", toggleOpen, false);
+    menuBtn.addEventListener("tap", toggleOpen, false);
   }
 
   function toggleOpen() {
@@ -30,7 +30,7 @@
 
 
   if(closeBtn) {
-    closeBtn.addEventListener("click", toggleClose, false);
+    closeBtn.addEventListener("tap", toggleClose, false);
   }
 
   function toggleClose() {
