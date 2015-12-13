@@ -3,6 +3,9 @@
     return;
   }
 
+  document.getElementById("person-amount").readOnly = true;
+  document.getElementById("days-amount").readOnly = true;
+
   // get all + and - buttons and add event handler onclick for them
 
   var buttons = document.querySelectorAll("button[class^='btn__counter']");
