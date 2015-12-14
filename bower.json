@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "mustache.js": "mustache#~2.2.0",
-    "tap": "~1.0.7"
+    "tap": "~1.0.7",
+    "moment": "~2.10.6"
   }
 }
