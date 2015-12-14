@@ -7,9 +7,7 @@
   var crosses = document.querySelectorAll(".cancel-upload");
   for (var i = 0; i < crosses.length; i++) {
     if (crosses[i].addEventListener)
-      crosses[i].addEventListener("click", deletePhoto, false);
-    else if (crosses[i].attachEvent)
-      crosses[i].attachEvent('onclick', deletePhoto);
+      crosses[i].addEventListener("tap", deletePhoto, false);
   }
 
   var deletedArr = [];      //array with names of deleted files
@@ -88,7 +86,7 @@
 
           var link = document.createElement("a");
           link.classList.add("cancel-upload", "icon-close");
-          link.addEventListener("click", deletePhoto, false);
+          link.addEventListener("tap", deletePhoto, false);
 
           var img = document.createElement("img");
           img.src = event.target.result;

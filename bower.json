@@ -1,0 +1,23 @@
+{
+  "name": "86999-sedona",
+  "description": "Обучающий проект «sedona» от HTML Academy",
+  "main": "",
+  "authors": [
+    "Александр Зинчук"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/VikingRock/86999-sedona",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mustache.js": "mustache#~2.2.0",
+    "tap": "~1.0.7",
+    "moment": "~2.10.6"
+  }
+}
