@@ -53,8 +53,10 @@ gulp.task('connect', function() {
   })
 });
 
-// reload page
+// reload html page on change
 gulp.task('html', function () {
+  gulp.src('./source/*.html')
+    .pipe(gulp.dest('./build/'))
  gulp.src('./build/*.html')
     .pipe(connect.reload());
 });
