@@ -13,6 +13,7 @@
   var popupFailure = document.querySelector(".popup__element--failure");
   var popupSuccess = document.querySelector(".popup__element--success");
   var closeButtons = document.querySelectorAll(".popup__element .btn");
+  var uploadButtons = document.querySelectorAll(".feedback__upload .btn");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -29,9 +30,18 @@
   });
 
   fileInput.addEventListener("change", function() {
+
+    for (var i = 0; i < uploadButtons.length; i++) {
+      uploadButtons[i].classList.add("btn--in-progress");
+    }
+
     var files = this.files;
+    var isLast = false;
     for (var i = 0; i < files.length; i++) {
-      preview(files[i]);
+      if (i == (files.length - 1)){
+        isLast = true;
+      }
+      preview(files[i], isLast);
     }
     this.value = "";
   });
@@ -66,7 +76,7 @@
 
   }
 
-  function preview(file) {
+  function preview(file, flag) {
     if (file.type.match(/image.*/)) {
       var reader = new FileReader();
       reader.addEventListener("load", function(event) {
@@ -91,6 +101,16 @@
           node: node
         });
       });
+
+      var printEventType = function(event) {
+        if (flag == true) {
+          for (var i = 0; i < uploadButtons.length; i++) {
+            uploadButtons[i].classList.remove("btn--in-progress");
+          }
+        }
+      };
+
+      reader.onloadend = printEventType;
 
       reader.readAsDataURL(file);
     }
