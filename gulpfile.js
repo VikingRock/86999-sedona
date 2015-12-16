@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     minify = require("gulp-minify-css"),
     uglify = require('gulp-uglify'),
     imageop = require('gulp-image-optimization'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    copy = require('copy');
 
 var jsLibs = [
   './bower_components/moment/min/moment-with-locales.min.js',
@@ -34,6 +35,13 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
+//copy files to build
+gulp.task('copy', function () {
+  gulp.src(['./source/img/*.svg', './source/img/*.ico'])
+    .pipe(gulp.dest('./build/img/'))
+  gulp.src('./source/*.html')
+    .pipe(gulp.dest('./build/'))
+});
 
 // Web server
 gulp.task('connect', function() {
