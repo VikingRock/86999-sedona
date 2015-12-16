@@ -7,12 +7,14 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     concat = require('gulp-concat'),
     runSequence = require('run-sequence'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    rename = require("gulp-rename"),
+    minify = require("gulp-minify-css");
 
 // Web server
 gulp.task('connect', function() {
   connect.server({
-    root:'./',
+    root:'./build/',
     livereload: true,
     port: 8080
   })
@@ -20,19 +22,22 @@ gulp.task('connect', function() {
 
 // reload page
 gulp.task('html', function () {
- gulp.src('./*.html')
+ gulp.src('./build/*.html')
     .pipe(connect.reload());
 });
 
 // css
 gulp.task('style', function() {
-  return gulp.src('less/style.less')
+  return gulp.src('source/less/style.less')
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
       autoprefixer({browsers: 'last 2 versions'})
     ]))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest('build/css'))
     .pipe(connect.reload());
 });
 
