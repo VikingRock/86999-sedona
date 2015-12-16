@@ -102,15 +102,13 @@
         });
       });
 
-      var printEventType = function(event) {
+      reader.onloadend = function() {
         if (flag == true) {
           for (var i = 0; i < uploadButtons.length; i++) {
             uploadButtons[i].classList.remove("btn--in-progress");
           }
         }
       };
-
-      reader.onloadend = printEventType;
 
       reader.readAsDataURL(file);
     }
