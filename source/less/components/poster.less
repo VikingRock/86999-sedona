@@ -1,0 +1,67 @@
+.poster {
+  .poster-bkg(50%, 97%, auto, 324px, 48px, 80px);
+
+  &--big {
+    .poster-bkg(50%, 0, auto, 768px, 47px, 48px);
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__welcome {
+    padding-bottom: 60px;
+  }
+
+  &__sedona {
+    padding-bottom: 67px;
+
+    &--small {
+      padding-bottom: 0;
+    }
+  }
+
+
+//========================== tablet ========================
+
+
+  @media(min-width: @screen-md) {
+    .poster-bkg(50%, 82%, 102%, 100%, 48px, 80px);
+
+    &--big {
+      .poster-bkg(50%, 0, 102%, 100%, 76px, 86px);
+    }
+
+    &__welcome {
+      width: 256px;
+      padding-bottom: 52px;
+    }
+
+    &__sedona {
+      width: 458px;
+      padding-bottom: 54px;
+
+      &--small {
+        padding: 54px 0 31px;
+      }
+    }
+
+    &__sucks {
+      width: 295px;
+    }
+  }
+
+
+//========================== desktop ========================
+
+
+  @media(min-width: @screen-lg) {
+    .poster-bkg(50%, 65%, 100% 19%, 100%, 48px, 90px);
+
+    &--big {
+      .poster-bkg(50%, 28%, 102%, 100%, 76px, 82px);
+    }
+  }
+}
+
