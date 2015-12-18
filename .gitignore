@@ -1,9 +1,9 @@
 gosha/
 node_modules/
 bower_components/
+build/
 .DS_Store
 Thumbs.db
 .idea
 *.sublime*
 *.log
-css/*.css
