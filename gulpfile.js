@@ -48,7 +48,7 @@ gulp.task('copy', function () {
 gulp.task('connect', function() {
   connect.server({
     root:'./build/',
-    livereload: true,
+    livereload: false,
     port: 8080
   })
 });
@@ -57,8 +57,8 @@ gulp.task('connect', function() {
 gulp.task('html', function () {
   gulp.src('./source/*.html')
     .pipe(gulp.dest('./build/'))
- gulp.src('./build/*.html')
-    .pipe(connect.reload());
+ gulp.src('./build/*.html');
+    //.pipe(connect.reload());
 });
 
 // css
@@ -72,8 +72,8 @@ gulp.task('style', function() {
     .pipe(gulp.dest('./build/css'))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest('./build/css'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('./build/css'));
+    //.pipe(connect.reload());
 });
 
 //js build
@@ -83,8 +83,8 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./build/js/'))
     .pipe(uglify())
     .pipe(rename('script.min.js'))
-    .pipe(gulp.dest('./build/js/'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest('./build/js/'));
+    //.pipe(connect.reload());
 });
 
 //images
