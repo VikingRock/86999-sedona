@@ -139,6 +139,14 @@
         }
       }
 
+      input + label:hover span {
+         background: @bg-color-grey--disabled;
+       }
+
+      input:checked + label:hover span {
+        border-color: @bg-color-grey--disabled;
+      }
+
       input:checked + label span {
         background: @text-color;
         border: 17px solid @bg-color-grey--light;
