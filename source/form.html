@@ -69,20 +69,25 @@
             <h2>представьтесь, пожалуйста</h2>
           </div>
 
-          <div class="feedback__field">
-            <label class="required__field" for="surname">фамилия:<span>*</span></label>
-            <input type="text" id="surname" name="surname" value="Иванов" required>
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--fullname">
+
+            <div class="feedback__field">
+              <label class="required__field" for="surname">фамилия:<span>*</span></label>
+              <input type="text" id="surname" name="surname" value="Иванов" required>
+            </div>
+
+            <div class="feedback__field">
+              <label class="required__field" for="name">имя:<span>*</span></label>
+              <input type="text" id="name" name="name" value="Петр" required>
+            </div>
+
+            <div class="feedback__field">
+              <label for="middle-name">отчество:</label>
+              <input type="text" id="middle-name" name="middle-name" value="Александрович">
+            </div>
+
           </div>
 
-          <div class="feedback__field">
-            <label class="required__field" for="name">имя:<span>*</span></label>
-            <input type="text" id="name" name="name" value="Петр" required>
-          </div>
-
-          <div class="feedback__field">
-            <label for="middle-name">отчество:</label>
-            <input type="text" id="middle-name" name="middle-name" value="Александрович">
-          </div>
 
         </section>
 
@@ -93,14 +98,18 @@
             <h2>ваше общее впечатление</h2>
           </div>
 
-          <div class="feedback__field  feedback__field--radio">
-            <input type="radio" name="impression" id="impr_1" value="good" checked>
-            <label for="impr_1"><span></span>Скорее положительное</label>
-          </div>
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--impression">
 
-          <div class="feedback__field  feedback__field--radio">
-            <input type="radio" name="impression" id="impr_2" value="bad">
-            <label for="impr_2"><span></span>Скорее отрицательное</label>
+            <div class="feedback__field  feedback__field--radio">
+              <input type="radio" name="impression" id="impr_1" value="good" checked>
+              <label for="impr_1"><span></span>Скорее положительное</label>
+            </div>
+
+            <div class="feedback__field  feedback__field--radio">
+              <input type="radio" name="impression" id="impr_2" value="bad">
+              <label for="impr_2"><span></span>Скорее отрицательное</label>
+            </div>
+
           </div>
 
         </section>
@@ -112,31 +121,35 @@
             <h2>даты вашей поездки</h2>
           </div>
 
-          <div class="feedback__field">
-            <label class="required__field" for="arrival">дата приезда:<span>*</span></label>
-            <input type="text" id="arrival" name="arrival" value="4 июля 2015" required>
-          </div>
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--dates">
 
-          <div class="feedback__field  feedback__field--counter">
-            <label class="required__field" for="days-amount">
-              <span class="tablet-text">дней</span><span class="mobile-text">длительность</span> пребывания:<span>*</span>
-            </label>
-
-            <div class="feedback__counter-container">
-
-              <button class="btn__counter--left icon-minus" type="button"></button>
-              <div class="feedback__counter-placeholder">
-                <input type="number" id="days-amount" name="days-amount" value="14" max="30" min="0" data-max="30" required>
-              </div>
-              <button class="btn__counter--right icon-plus" type="button"></button>
-
+            <div class="feedback__field">
+              <label class="required__field" for="arrival">дата приезда:<span>*</span></label>
+              <input type="text" id="arrival" name="arrival" value="4 июля 2015" required>
             </div>
-          </div>
+
+            <div class="feedback__field  feedback__field--counter">
+              <label class="required__field" for="days-amount">
+                <span class="tablet-text">дней</span><span class="mobile-text">длительность</span> пребывания:<span>*</span>
+              </label>
+
+              <div class="feedback__counter-container">
+
+                <button class="btn__counter--left icon-minus" type="button"></button>
+                <div class="feedback__counter-placeholder">
+                  <input type="number" id="days-amount" name="days-amount" value="14" max="30" min="0" data-max="30" required>
+                </div>
+                <button class="btn__counter--right icon-plus" type="button"></button>
+
+              </div>
+            </div>
 
           <div class="feedback__field  feedback__field--calculated">
             <label class="required__field" for="departure">дата отъезда:<span>*</span></label>
             <input type="text" id="departure" name="departure" value="28 июля 2015" required>
           </div>
+
+        </div>
 
         </section>
 
@@ -147,19 +160,23 @@
             <h2>кол-во путешественников</h2>
           </div>
 
-          <div class="feedback__field  feedback__field--counter">
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--people">
 
-            <label class="required__field" for="person-amount">кол<span class="mobile-text">ичест</span><span class="tablet-text">-</span>во путешественников:<span>*</span></label>
+            <div class="feedback__field  feedback__field--counter">
 
-            <div class="feedback__counter-container">
+              <label class="required__field" for="person-amount">кол<span class="mobile-text">ичест</span><span class="tablet-text">-</span>во путешественников:<span>*</span></label>
 
-              <button class="btn__counter--left icon-minus" type="button"></button>
-              <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
-                <input type="number" id="person-amount" name="person-amount" value="0" max="10" min="0" data-max="10" required>
+              <div class="feedback__counter-container">
+
+                <button class="btn__counter--left icon-minus" type="button"></button>
+                <div class="feedback__counter-placeholder  feedback__counter-placeholder--person">
+                  <input type="number" id="person-amount" name="person-amount" value="0" max="10" min="0" data-max="10" required>
+                </div>
+                <button class="btn__counter--right icon-plus" type="button"></button>
+
               </div>
-              <button class="btn__counter--right icon-plus" type="button"></button>
-
             </div>
+
           </div>
 
         </section>
@@ -171,24 +188,28 @@
             <h2>посещенные  достопримечательности</h2>
           </div>
 
-          <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="devil" name="sights" value="devil" checked>
-            <label for="devil">Мост Дьявола</label>
-          </div>
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--sights">
 
-          <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="slide" name="sights" value="slide">
-            <label for="slide">Слайд-парк</label>
-          </div>
+            <div class="feedback__field  feedback__field--check">
+              <input type="checkbox" id="devil" name="sights" value="devil" checked>
+              <label for="devil">Мост Дьявола</label>
+            </div>
 
-          <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="bell" name="sights" value="bell" checked>
-            <label for="bell">Гора-Колокол</label>
-          </div>
+            <div class="feedback__field  feedback__field--check">
+              <input type="checkbox" id="slide" name="sights" value="slide">
+              <label for="slide">Слайд-парк</label>
+            </div>
 
-          <div class="feedback__field  feedback__field--check">
-            <input type="checkbox" id="mountains" name="sights" value="mountains" checked>
-            <label for="mountains">Красные скалы</label>
+            <div class="feedback__field  feedback__field--check">
+              <input type="checkbox" id="bell" name="sights" value="bell" checked>
+              <label for="bell">Гора-Колокол</label>
+            </div>
+
+            <div class="feedback__field  feedback__field--check">
+              <input type="checkbox" id="mountains" name="sights" value="mountains" checked>
+              <label for="mountains">Красные скалы</label>
+            </div>
+
           </div>
 
         </section>
@@ -200,13 +221,15 @@
             <h2>загрузите фотографии</h2>
           </div>
 
-          <div class="feedback__upload">
-            <input type="file" name="image-upload" id="image-upload"  accept="image/jpeg,image/png,image/gif" multiple>
-            <label class="btn  btn--grey" for="image-upload">выбрать фотографии</label>
-            <label class="btn  btn--drag" for="image-upload">перетащите фотографии сюда</label>
-          </div>
+          <div class="feedback__fieldset-wrapper feedback__fieldset-wrapper--photos">
 
-          <div class="feedback__gallery">
+            <div class="feedback__upload">
+              <input type="file" name="image-upload" id="image-upload"  accept="image/jpeg,image/png,image/gif" multiple>
+              <label class="btn  btn--grey" for="image-upload">выбрать фотографии</label>
+              <label class="btn  btn--drag" for="image-upload">перетащите фотографии сюда</label>
+            </div>
+
+            <div class="feedback__gallery"></div>
 
           </div>
 
