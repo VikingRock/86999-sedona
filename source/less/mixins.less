@@ -28,12 +28,10 @@
 .poster-bkg(@x, @y, @bg-size-triangle, @bg-size, @padding-top, @padding-bottom) {
   background:
     url("../img/intro-triangle.svg") 50% 100% no-repeat,
-    url("../img/photo-background@1x.jpg") @x @y no-repeat,
-    @bg-color-blue--light;
+    @bg-color-blue--light url("../img/photo-background@1x.jpg") @x @y no-repeat;
   background-size:
     @bg-size-triangle,
-    @bg-size,
-    auto;
+    @bg-size;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
 
@@ -41,12 +39,10 @@
   (min-resolution: 1.5dppx) {
     background:
       url("../img/intro-triangle.svg") 50% 100% no-repeat,
-      url("../img/photo-background@2x.jpg") @x @y no-repeat,
-      @bg-color-blue--light;
+      @bg-color-blue--light url("../img/photo-background@2x.jpg") @x @y no-repeat;
     background-size:
       @bg-size-triangle,
-      @bg-size,
-      auto;
+      @bg-size;
   }
 }
 
